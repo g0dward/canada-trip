@@ -5,90 +5,18 @@
 <meta name="robots" content="noindex, nofollow" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Who is the city for? A walk from the Distillery to St. Lawrence</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --bg: #f4f1ea;
-    --paper: #fbf9f4;
-    --ink: #1a1a17;
-    --muted: #6a655c;
-    --rule: #d7d1c4;
-    --accent: #2f5d50;
-    --accent-soft: #dfe6df;
-    --warm: #a8563a;
-  }
-  * { box-sizing: border-box; }
-  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); }
-  body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 17px; line-height: 1.65;
-    -webkit-font-smoothing: antialiased;
-  }
-  .wrap { max-width: 1080px; margin: 0 auto; padding: 72px 40px 120px; }
-  @media (max-width: 640px) { .wrap { padding: 44px 20px 80px; } }
-  h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; font-weight: 500; letter-spacing: -0.01em; margin: 0; }
-  h1 { font-size: clamp(38px, 5.4vw, 68px); line-height: 1.0; font-weight: 400; font-style: italic; }
-  h1 .roman { font-style: normal; }
-  h2 { font-size: clamp(26px, 3.6vw, 38px); line-height: 1.08; }
-  h3 { font-size: 22px; line-height: 1.25; }
-  p { margin: 0 0 16px; }
-  a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-soft); }
-  a:hover { border-bottom-color: var(--accent); }
-  .kicker { font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; }
-  .kicker a { border: 0; color: var(--accent); }
-  .lede { font-family: 'Fraunces', Georgia, serif; font-size: 21px; line-height: 1.5; color: var(--muted); max-width: 700px; margin: 26px 0 0; }
-  section { margin-top: 76px; }
-  section > h2 { margin-bottom: 10px; }
-  .section-lede { color: var(--muted); max-width: 720px; margin: 0 0 36px; }
-  hr.divider { border: 0; height: 1px; background: var(--rule); margin: 72px 0 0; }
-
-  .facts { border-top: 1px solid var(--ink); margin-top: 34px; }
-  .facts > div { display: grid; grid-template-columns: 130px 1fr; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--rule); font-size: 15px; }
-  .facts .k { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); padding-top: 3px; }
-
-  .map { aspect-ratio: 16 / 9; border: 1px solid var(--rule); overflow: hidden; background: var(--accent-soft); margin-top: 34px; }
-  .map iframe { width: 100%; height: 100%; border: 0; display: block; }
-
-  .stop { padding: 34px 0 30px; border-bottom: 1px solid var(--rule); }
-  .stop-head { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; }
-  .num { font-family: 'Fraunces', serif; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
-  .stop h3 { font-size: 25px; }
-  .stop .addr { font-size: 13px; color: var(--muted); }
-  .stop p { margin: 14px 0 0; max-width: 760px; }
-  .leg { display: flex; flex-wrap: wrap; gap: 0 14px; margin-top: 14px; font-size: 13px; color: var(--muted); }
-  .leg span { padding-right: 14px; border-right: 1px solid var(--rule); }
-  .leg span:last-child { border-right: 0; padding-right: 0; }
-
-  blockquote { margin: 20px 0 0; padding: 0 0 0 20px; border-left: 2px solid var(--accent); max-width: 720px; }
-  blockquote p { font-family: 'Fraunces', Georgia, serif; font-size: 19px; line-height: 1.45; font-style: italic; margin: 0; }
-  blockquote cite { display: block; margin-top: 10px; font-family: 'Inter', sans-serif; font-size: 13px; font-style: normal; color: var(--muted); }
-
-  .trap { margin-top: 16px; padding: 11px 15px; background: #efe7dd; font-size: 14px; border-left: 2px solid var(--warm); max-width: 780px; }
-  .trap strong { color: var(--warm); }
-  .callout { margin-top: 32px; padding: 30px 34px; background: var(--accent); color: #eef3ee; }
-  .callout h3 { color: #fff; font-style: italic; font-size: 26px; }
-  .callout p { color: #cfe0d8; margin-top: 12px; max-width: 740px; }
-  .callout strong { color: #fff; }
-  .warnbox { margin-top: 28px; padding: 22px 26px; background: #ece7dc; border-left: 3px solid var(--muted); }
-  .warnbox h3 { font-size: 19px; margin-bottom: 8px; }
-  .warnbox p { font-size: 15px; margin-bottom: 8px; max-width: 780px; }
-  .warnbox p:last-child { margin-bottom: 0; }
-
-  table { width: 100%; border-collapse: collapse; margin-top: 24px; font-size: 15px; }
-  th { text-align: left; font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--ink); padding: 0 12px 8px 0; }
-  td { padding: 10px 12px 10px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
-  .maplink { display:inline-block; margin-left:8px; padding:3px 9px; font-size:10px; font-weight:600;
-             letter-spacing:.09em; text-transform:uppercase; color:var(--accent); border:1px solid var(--rule);
-             border-radius:3px; vertical-align:middle; white-space:nowrap; }
-  .maplink:hover { border-color:var(--accent); background:var(--accent-soft); }
-  .scroller { overflow-x: auto; }
-  .sources { font-size: 14px; color: var(--muted); max-width: 800px; }
-  .sources li { margin-bottom: 9px; }
-</style>
+<link rel="stylesheet" href="../assets/style.css">
 </head>
-<body>
+<body id="top">
+<nav class="topnav"><div class="nav-inner">
+<a class="brand" href="../index.html">ONTARIO &rsquo;26</a>
+<div class="nav-links">
+<a href="the-rail-triangle.html">Rail Triangle</a>
+<a href="the-dry-town.html">Dry Town</a>
+<a href="who-is-the-city-for.html">The City</a>
+<a href="the-carrying-place.html">Carrying Place</a>
+</div>
+</div></nav>
 <div class="wrap">
 
 <header>
