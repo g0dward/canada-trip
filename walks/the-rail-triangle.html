@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Rail Triangle: three railways and a chocolate factory</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f4f1ea;
+    --paper: #fbf9f4;
+    --ink: #1a1a17;
+    --muted: #6a655c;
+    --rule: #d7d1c4;
+    --accent: #2f5d50;
+    --accent-soft: #dfe6df;
+    --warm: #a8563a;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 17px; line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 72px 40px 120px; }
+  @media (max-width: 640px) { .wrap { padding: 44px 20px 80px; } }
+  h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; font-weight: 500; letter-spacing: -0.01em; margin: 0; }
+  h1 { font-size: clamp(38px, 5.4vw, 68px); line-height: 1.0; font-weight: 400; font-style: italic; }
+  h1 .roman { font-style: normal; }
+  h2 { font-size: clamp(26px, 3.6vw, 38px); line-height: 1.08; }
+  h3 { font-size: 22px; line-height: 1.25; }
+  p { margin: 0 0 16px; }
+  a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-soft); }
+  a:hover { border-bottom-color: var(--accent); }
+  .kicker { font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; }
+  .kicker a { border: 0; color: var(--accent); }
+  .lede { font-family: 'Fraunces', Georgia, serif; font-size: 21px; line-height: 1.5; color: var(--muted); max-width: 700px; margin: 26px 0 0; }
+  section { margin-top: 76px; }
+  section > h2 { margin-bottom: 10px; }
+  .section-lede { color: var(--muted); max-width: 720px; margin: 0 0 36px; }
+  hr.divider { border: 0; height: 1px; background: var(--rule); margin: 72px 0 0; }
+
+  .facts { border-top: 1px solid var(--ink); margin-top: 34px; }
+  .facts > div { display: grid; grid-template-columns: 130px 1fr; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--rule); font-size: 15px; }
+  .facts .k { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); padding-top: 3px; }
+
+  .map { aspect-ratio: 16 / 10; border: 1px solid var(--rule); overflow: hidden; background: var(--accent-soft); margin-top: 34px; }
+  .map iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+  .stop { padding: 34px 0 30px; border-bottom: 1px solid var(--rule); }
+  .stop-head { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+  .num { font-family: 'Fraunces', serif; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+  .stop h3 { font-size: 25px; }
+  .stop .addr { font-size: 13px; color: var(--muted); }
+  .stop p { margin: 14px 0 0; max-width: 760px; }
+  .leg { display: flex; flex-wrap: wrap; gap: 0 14px; margin-top: 14px; font-size: 13px; color: var(--muted); }
+  .leg span { padding-right: 14px; border-right: 1px solid var(--rule); }
+  .leg span:last-child { border-right: 0; padding-right: 0; }
+
+  blockquote { margin: 20px 0 0; padding: 0 0 0 20px; border-left: 2px solid var(--accent); max-width: 720px; }
+  blockquote p { font-family: 'Fraunces', Georgia, serif; font-size: 19px; line-height: 1.45; font-style: italic; margin: 0; }
+  blockquote cite { display: block; margin-top: 10px; font-family: 'Inter', sans-serif; font-size: 13px; font-style: normal; color: var(--muted); }
+
+  .trap { margin-top: 16px; padding: 11px 15px; background: #efe7dd; font-size: 14px; border-left: 2px solid var(--warm); max-width: 780px; }
+  .trap strong { color: var(--warm); }
+  .callout { margin-top: 32px; padding: 30px 34px; background: var(--accent); color: #eef3ee; }
+  .callout h3 { color: #fff; font-style: italic; font-size: 26px; }
+  .callout p { color: #cfe0d8; margin-top: 12px; max-width: 740px; }
+  .callout strong { color: #fff; }
+  .warnbox { margin-top: 28px; padding: 22px 26px; background: #ece7dc; border-left: 3px solid var(--muted); }
+  .warnbox h3 { font-size: 19px; margin-bottom: 8px; }
+  .warnbox p { font-size: 15px; margin-bottom: 8px; max-width: 780px; }
+  .warnbox p:last-child { margin-bottom: 0; }
+
+  table { width: 100%; border-collapse: collapse; margin-top: 24px; font-size: 15px; }
+  th { text-align: left; font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--ink); padding: 0 12px 8px 0; }
+  td { padding: 10px 12px 10px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  .scroller { overflow-x: auto; }
+  .sources { font-size: 14px; color: var(--muted); max-width: 800px; }
+  .sources li { margin-bottom: 9px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="kicker"><a href="../index.html">&larr; Ontario, 15 to 29 August</a> &middot; Walk two &middot; From the front door</div>
+  <h1><span class="roman">Three railways and</span> a chocolate factory</h1>
+  <p class="lede">You are staying inside a triangle drawn by rail lines on all three sides. That is not a metaphor. It is why the neighbourhood had no name for a century, why it filled with factories, why it emptied, and why it smells of Kit Kats.</p>
+</header>
+
+<div class="facts">
+  <div><div class="k">Distance</div><div>4.4 km, about 50 minutes of walking, two to three hours with stops. Starts and ends at your own door.</div></div>
+  <div><div class="k">Best day</div><div><strong>Sunday 16 August, starting around 09:15.</strong> MOCA is the last stop and 16 August is its final day before it shuts until October. It opens at 10:00. Walk the tour, arrive at the doors as they open, and the rest of that Sunday is still free for Geary Avenue at 15:00.</div></div>
+  <div><div class="k">After the 16th</div><div>The walk still works. You just finish at the outside of a closed gallery, which is a slightly bleaker ending than the one intended.</div></div>
+  <div><div class="k">Watch for</div><div>The Railpath may be closed on the stretch you need. There is a street-level fallback below and the walk survives either way.</div></div>
+</div>
+
+<div class="map">
+  <iframe loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=-79.4620,43.6480,-79.4380,43.6690&amp;layer=mapnik&amp;marker=43.66058,-79.45285" title="Route map, Junction Triangle and Sterling Road"></iframe>
+</div>
+
+<hr class="divider" />
+
+<section>
+  <h2>The argument</h2>
+  <p class="section-lede">Built by rails, emptied by the same logic that built it, resold as culture. And one factory that never left.</p>
+
+  <p>Everything here arrived because of the tracks. The Gurney Foundry, the Comfort Soap Works, the Campbell Flour Mill, Standard Foundry, Nordheimer Piano, Canadian Cycle. Note the verb though: these firms did not grow here, they <strong>moved</strong> here. This was Toronto's first industrial suburb, factories quitting the crowded core for cheap land with a railway siding attached.</p>
+
+  <p>Which is the joke, and the tour's spine. The exact logic that built this place is the logic that later took the jobs to Mississauga and hollowed it out. The neighbourhood was a beneficiary of industrial decentralisation and then a casualty of it, for the same reason, about eighty years apart.</p>
+
+  <p>The name is the giveaway. It did not have one. A local project called Fuzzy Boundaries ran a public vote in March 2010, more than two hundred suggestions came in, and "Junction Triangle" won. Your neighbourhood is sixteen years old and the buildings in it are a hundred and twenty.</p>
+</section>
+
+<hr class="divider" />
+
+<section>
+  <h2>The walk</h2>
+  <p class="section-lede">Out the door, south, west across the tracks, then south along the corridor and back up a dead end street to the gallery.</p>
+
+  <div class="stop">
+    <div class="stop-head"><span class="num">Stop one</span><h3>Lansdowne and Wallace</h3><span class="addr">Six minutes from the door</span></div>
+    <p>Start with the lofts. These are the converted works of the firms above, and the City's own heritage survey makes the pattern explicit: they were "typically constructed adjacent to railway lines." Not near. Adjacent. The siding was the point.</p>
+    <p>Worth knowing what else was made within a few hundred metres of here before 1910: soap, flour, pianos, bicycles and cars. Canadian Cycle became C.C.M., and produced the Russell Model A up at Weston Road and St Clair. There was a car industry on this ground before the First World War.</p>
+    <p>Halo Brewery is on the corner at 247 Wallace if it is open, which is genuinely uncertain in 2026, so treat it as a maybe rather than a stop.</p>
+  </div>
+
+  <div class="stop">
+    <div class="stop-head"><span class="num">Stop two</span><h3>The Wallace Avenue footbridge</h3><span class="addr">Wallace at Sousa Mendes, by number 391</span></div>
+    <div class="leg"><span>540 m from stop one</span><span>7 min</span></div>
+    <p>The best object on the walk, and the whole tour compressed into one piece of steel.</p>
+    <p>Built 1907 for four and a half thousand dollars. It was the Ontario Bridge Company's very first design. It is a Warren pony truss, which means the equilateral steel triangles along the sides are doing the structural work, and it is one of very few left in the city. It crosses the tracks at an oblique angle rather than a right angle, which almost nothing else does.</p>
+    <p>And it was meant to be temporary. Heritage Toronto puts it plainly:</p>
+    <blockquote>
+      <p>Once the Wallace Avenue Pedestrian Bridge was built however, people liked it and the bridge became a permanent feature of the Junction Triangle neighbourhood.</p>
+      <cite>Heritage Toronto</cite>
+    </blockquote>
+    <p>Before it existed, getting to a shop, a school or a job on the other side of the tracks meant walking north to Dupont or south to Bloor. Stand on it and notice that this is still the walking problem here, and that a stopgap from 1907 is still solving it. Every industry it was built to serve has gone. The bridge is protected under the Ontario Heritage Act.</p>
+  </div>
+
+  <div class="stop">
+    <div class="stop-head"><span class="num">Stop three</span><h3>The West Toronto Railpath</h3><span class="addr">Directly under the bridge, heading south</span></div>
+    <div class="leg"><span>1.6 km along the path</span><span>22 min</span></div>
+    <p>Drop down onto the path and walk south. It runs on former rail land right along the corridor, and the geography is unusually tidy: its southern end <em>is</em> the mouth of Sterling Road, so the path delivers you to the next three stops without a single road crossing.</p>
+    <p>The argument to carry down it: the same corridor that cut this neighbourhood into pieces has been converted, one narrow strip at a time, into the thing that stitches it back together. Hold the applause though. The southern extension, roughly two more kilometres with four new bridges, has been promised for years, had still not started as of January 2026, and the budget is approaching two hundred million dollars. Locally it has become a joke.</p>
+    <div class="trap"><strong>This is the one live risk on the walk.</strong> The Railpath reopened after a four-year closure, but an August 2026 local source says another closure is expected "from Perth to Dundas Street later this year", which is exactly the stretch you want. If it is shut: from the footbridge take Sousa Mendes Street down the west side of the corridor (that street exists <em>because</em> of the corridor), out to Perth Avenue, south to Bloor, then east to Sterling Road and south. Slightly longer, all pavement, and it has the advantage of putting you on Perth, which is the street the triangle actually lived on.</div>
+  </div>
+
+  <div class="stop">
+    <div class="stop-head"><span class="num">Stop four</span><h3>Nestlé</h3><span class="addr">72 Sterling Road</span></div>
+    <div class="leg"><span>230 m north from the path's end</span><span>3 min</span></div>
+    <p>Here is the factory that never left, and the reason this walk is not simply another elegy for industry.</p>
+    <p>Sterling Road was cut through a lumber merchant's land by 1903, between the Canadian Pacific and the Grand Trunk. A chocolate factory opened at number 72 that same year: Cowan's. Rowntree's bought it in the 1920s and brought its own line with it. <strong>Aero, 1935. Smarties, 1938.</strong> Kit Kat later. Nestlé runs it now and still makes the Rowntree's inheritance: Kit Kat, Coffee Crisp, Aero, Smarties, twenty-four hours a day, three hundred and sixty-five days a year, with several hundred people inside.</p>
+    <p>Everything else on this street has been converted, renamed, or turned into an art gallery. Number 72 is still making confectionery and you can smell it from the pavement. That is the stop. Stand there and breathe in.</p>
+    <div class="trap"><strong>There is no public tour and there is nothing to go into.</strong> Nestlé has run occasional invite-only visits, and it publishes a visitor guide for suppliers and staff, but nothing you can book. Also worth one line as proof this is a real working plant rather than a heritage prop: production stopped during a strike in 2024 and restarted after a three-year deal.</div>
+  </div>
+
+  <div class="stop">
+    <div class="stop-head"><span class="num">Stop five</span><h3>The pickle works</h3><span class="addr">128 Sterling Road, now Henderson Brewing</span></div>
+    <div class="leg"><span>350 m</span><span>5 min</span></div>
+    <p>Built 1908 for T.A. Lytle and Company: pickles and vinegar. Lytle himself was an Irish immigrant who arrived in 1871 and died in 1911 at sixty-six. The operation wound up in the 1920s and the building went to Scythes and Co., which became Flying Colours International in 2001 and moved out in 2014.</p>
+    <p>Now it is Henderson Brewing, and this is where the two Junction walks shake hands. A works that fermented things for a living, sitting a few hundred metres outside a district that had outlawed drinking. In 2017 Henderson released a limited edition beer called <strong>The Ghost of Prohibition</strong>. If you want to know what that is about, do the other walk.</p>
+    <div class="trap"><strong>Do not go looking for the Drake Commissary.</strong> It closed to the public in August 2021 and Heritage Toronto's page still lists it, which tells you how old that page is. Henderson's own listed hours are from ten in the morning, but they are listing-sourced, so check on the day.</div>
+  </div>
+
+  <div class="stop">
+    <div class="stop-head"><span class="num">Stop six</span><h3>MOCA, in the aluminium works</h3><span class="addr">158 Sterling Road</span></div>
+    <div class="leg"><span>155 m</span><span>2 min</span></div>
+    <p>Built 1919 to 1920 for the Northern Aluminum Company, later Alcan. It made cooking utensils and supplies for Canadian forces in the First World War, and by the Second the company held roughly three quarters of aluminium production across the British Empire. It stayed here more than fifty years, turning out kitchen tools, bottle caps and car parts. Tower Automotive took it on after 2000, went bankrupt in 2006, and left its name on the building.</p>
+    <p>Now the detail that changes how you look at the galleries. The architect was John W. Woodman, working <strong>with C.A.P. Turner</strong>, the American engineer who commercialised the flat concrete slab carried on mushroom columns. So the flared capitals you can see inside are not a happy accident of reuse and not decoration. They are the reason the building could be built this tall, designed with the man whose technique they are. ERA Architects, who did the heritage work in the 2015 conversion, specifically prioritised keeping them visible. The front doors are the factory's own wooden bi-fold loading doors, refurbished rather than replaced.</p>
+    <div class="trap"><strong>16 August is the last day of the season.</strong> Kimsooja on floors one and three, Sara Cwynar on two, Thenjiwe Niki Nkosi in the south stairwell. Then it shuts until 3 October. Sunday hours are 10:00 to 17:00, adult $14, and floor one is always free.</div>
+    <p>One honest note to end on, because this walk should not become a redevelopment brochure. Heritage Toronto's own account of the area's art-led revival records that as early as January 2016, <em>before</em> MOCA even opened, some local art studios saw rents rise by over 55 per cent, and that while people now come here for the art and culture, many of the artists and cultural workers are gradually being driven out. The gallery in the factory is a good building doing good work. It is also the instrument of something, and the people it displaced were the previous tenants of exactly the same cheap industrial space.</p>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<section>
+  <h2>If you want more of it</h2>
+  <p class="section-lede">Two extensions, both optional, neither needed.</p>
+  <p><strong>North up the Railpath, 3.2 km round.</strong> From the footbridge, north to the path's top end at Cariboo Avenue, then east to the <strong>Galleria site</strong> at Dupont and Dufferin: twenty acres of half-demolished shopping mall becoming eight buildings, 2,900 condominiums, 150 affordable rentals and an eight-acre park, master plan by Hariri Pontarini. Expect hoardings and cranes. It is the same story as Sterling Road told in the present tense, with the outcome not yet known.</p>
+  <p><strong>Geary Avenue is a separate evening.</strong> It is 600 m east of the Galleria site and it is a drinking street now, so it reads better after dark and it is already on the main list. Do not bolt it onto this.</p>
+</section>
+
+<hr class="divider" />
+
+<section>
+  <h2>Where this came from</h2>
+  <p class="section-lede">Full corpus, with everything unverified flagged, in <code>research/walking-tours/junction.md</code>.</p>
+  <ul class="sources">
+    <li>The spine of the fact layer: <a href="https://www.toronto.ca/wp-content/uploads/2025/02/8dbc-CityPlanning-West-Toronto-Junction-Historic-Context-Statement-Final-May-13-2020.pdf">City of Toronto, <em>West Toronto Junction Historic Context Statement</em></a>, prepared by Common Bond Collective, May 2020. A hundred and forty pages that footnote everything to named newspapers and books, with a complete list of heritage properties and their architects. Not beautiful, but it is the thing to check everything else against.</li>
+    <li><a href="https://www.heritagetoronto.org/explore/junction-triangle-toronto-history/wallace-avenue-pedestrian-bridge/">Heritage Toronto on the Wallace Avenue Pedestrian Bridge</a>, and its sibling pieces on <a href="https://www.heritagetoronto.org/explore/junction-triangle-toronto-history/junction-triangle-prohibition-ghosts/">prohibition ghosts</a> and <a href="https://www.heritagetoronto.org/explore/junction-triangle-toronto-history/junction-triangle-art-development/">art-led development</a>, the last of which is unusually honest about who the art displaced.</li>
+    <li><a href="https://www.eraarch.ca/projects/moca-toronto/">ERA Architects on the MOCA conversion</a>, which is where the C.A.P. Turner collaboration is documented. Note that a claim circulating in developer copy, that this was the tallest building in Toronto when built, is almost certainly false and is not repeated here.</li>
+    <li><a href="https://medium.com/@robertwalterj/the-toronto-neighbourhood-that-chocolate-made-69e3da2549f4">Robert WalterJ, "The Toronto Neighbourhood That Chocolate Made"</a>, 2024. Not a marquee byline, but the only piece found that treats Sterling Road as a continuous industrial story rather than a real estate story.</li>
+    <li><a href="https://www.twowheeledpolitics.ca/2026/08/west-toronto-railpath-2026-update.html">Two Wheeled Politics, West Toronto Railpath 2026 update</a>, August 2026, which is where the warning about the coming Perth to Dundas closure comes from. The Friends of the Railpath construction page has not been updated since 2023 and is no use.</li>
+    <li>The gap worth closing: <strong>Shawn Micallef, <em>Stroll: Psychogeographic Walking Tours of Toronto</em></strong> (Coach House, expanded edition 2024). This is the model for all four of these walks and neither of the Junction chapters could be read online. The relevant section is the one he calls "Westish". Buy it, or borrow it from the Annette Street branch library, which is itself a 1908 heritage building on the other walk's route.</li>
+  </ul>
+</section>
+
+</div>
+</body>
+</html>

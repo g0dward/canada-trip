@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Carrying Place: a bit of England far from England</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f4f1ea;
+    --paper: #fbf9f4;
+    --ink: #1a1a17;
+    --muted: #6a655c;
+    --rule: #d7d1c4;
+    --accent: #2f5d50;
+    --accent-soft: #dfe6df;
+    --warm: #a8563a;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 17px; line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 72px 40px 120px; }
+  @media (max-width: 640px) { .wrap { padding: 44px 20px 80px; } }
+  h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; font-weight: 500; letter-spacing: -0.01em; margin: 0; }
+  h1 { font-size: clamp(38px, 5.4vw, 68px); line-height: 1.0; font-weight: 400; font-style: italic; }
+  h1 .roman { font-style: normal; }
+  h2 { font-size: clamp(26px, 3.6vw, 38px); line-height: 1.08; }
+  h3 { font-size: 22px; line-height: 1.25; }
+  p { margin: 0 0 16px; }
+  a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-soft); }
+  a:hover { border-bottom-color: var(--accent); }
+  .kicker { font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; }
+  .kicker a { border: 0; color: var(--accent); }
+  .lede { font-family: 'Fraunces', Georgia, serif; font-size: 21px; line-height: 1.5; color: var(--muted); max-width: 700px; margin: 26px 0 0; }
+  section { margin-top: 76px; }
+  section > h2 { margin-bottom: 10px; }
+  .section-lede { color: var(--muted); max-width: 720px; margin: 0 0 36px; }
+  hr.divider { border: 0; height: 1px; background: var(--rule); margin: 72px 0 0; }
+
+  .facts { border-top: 1px solid var(--ink); margin-top: 34px; }
+  .facts > div { display: grid; grid-template-columns: 130px 1fr; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--rule); font-size: 15px; }
+  .facts .k { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); padding-top: 3px; }
+
+  .map { aspect-ratio: 16 / 10; border: 1px solid var(--rule); overflow: hidden; background: var(--accent-soft); margin-top: 34px; }
+  .map iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+  .stop { padding: 34px 0 30px; border-bottom: 1px solid var(--rule); }
+  .stop-head { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+  .num { font-family: 'Fraunces', serif; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+  .stop h3 { font-size: 25px; }
+  .stop .addr { font-size: 13px; color: var(--muted); }
+  .stop p { margin: 14px 0 0; max-width: 760px; }
+  .leg { display: flex; flex-wrap: wrap; gap: 0 14px; margin-top: 14px; font-size: 13px; color: var(--muted); }
+  .leg span { padding-right: 14px; border-right: 1px solid var(--rule); }
+  .leg span:last-child { border-right: 0; padding-right: 0; }
+
+  blockquote { margin: 20px 0 0; padding: 0 0 0 20px; border-left: 2px solid var(--accent); max-width: 720px; }
+  blockquote p { font-family: 'Fraunces', Georgia, serif; font-size: 19px; line-height: 1.45; font-style: italic; margin: 0 0 12px; }
+  blockquote p:last-of-type { margin-bottom: 0; }
+  blockquote cite { display: block; margin-top: 10px; font-family: 'Inter', sans-serif; font-size: 13px; font-style: normal; color: var(--muted); }
+
+  .trap { margin-top: 16px; padding: 11px 15px; background: #efe7dd; font-size: 14px; border-left: 2px solid var(--warm); max-width: 780px; }
+  .trap strong { color: var(--warm); }
+  .callout { margin-top: 32px; padding: 30px 34px; background: var(--accent); color: #eef3ee; }
+  .callout h3 { color: #fff; font-style: italic; font-size: 26px; }
+  .callout p { color: #cfe0d8; margin-top: 12px; max-width: 740px; }
+  .callout strong { color: #fff; }
+  .callout blockquote { border-left-color: #8fb5a6; }
+  .callout blockquote p { color: #eef3ee; }
+  .callout blockquote cite { color: #a9c5b9; }
+  .warnbox { margin-top: 28px; padding: 22px 26px; background: #ece7dc; border-left: 3px solid var(--muted); }
+  .warnbox h3 { font-size: 19px; margin-bottom: 8px; }
+  .warnbox p { font-size: 15px; margin-bottom: 8px; max-width: 780px; }
+  .warnbox p:last-child { margin-bottom: 0; }
+
+  table { width: 100%; border-collapse: collapse; margin-top: 24px; font-size: 15px; }
+  th { text-align: left; font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--ink); padding: 0 12px 8px 0; }
+  td { padding: 10px 12px 10px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  .scroller { overflow-x: auto; }
+  .sources { font-size: 14px; color: var(--muted); max-width: 800px; }
+  .sources li { margin-bottom: 9px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="kicker"><a href="../index.html">&larr; Ontario, 15 to 29 August</a> &middot; Walk four &middot; A morning, with a climb</div>
+  <h1><span class="roman">A bit of England</span> far from England</h1>
+  <p class="lede">In 1912 a developer sold a plateau above the Humber under that slogan, in Latin. He was selling the site of a Seneca village called Teiaiagon, on the trail that is the reason Toronto exists at all. This is a walk up a hill with a lot underneath it.</p>
+</header>
+
+<div class="facts">
+  <div><div class="k">Distance</div><div>About 3.5 km the recommended way, up the river and over the top to Jane station. Two and a half to three hours, because the history is dense and the climb is not.</div></div>
+  <div><div class="k">Getting there</div><div>Lansdowne station, Line 2 west <strong>six stops to Old Mill</strong>, eight minutes. The park is a five minute walk from the station.</div></div>
+  <div><div class="k">The climb</div><div><strong>Thirty metres, steep, with stairs.</strong> Roughly a ten storey building. It is the one demanding part and it is unavoidable, because the whole point is that the village was up there and the river is down here.</div></div>
+  <div><div class="k">Carry water</div><div>No drinking water was confirmed anywhere on the route. Park toilets are open May to October, so they should be open. August in Toronto is hot and humid.</div></div>
+  <div><div class="k">Ends at</div><div>A pub with real ale, two minutes from Jane station, open from noon every day except Monday.</div></div>
+</div>
+
+<div class="map">
+  <iframe loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=-79.5080,43.6460,-79.4800,43.6620&amp;layer=mapnik&amp;marker=43.65136,-79.49157" title="Route map, Old Mill to Baby Point along the Humber"></iframe>
+</div>
+
+<hr class="divider" />
+
+<section>
+  <h2>Before anything else</h2>
+
+  <div class="callout">
+    <h3>This walk goes over a graveyard</h3>
+    <p>Two Seneca women were found buried under Baby Point, in <strong>1999 and 2006</strong>, both times by gas crews working in the front gardens of private houses. Many more burials were dug up during the building of the subdivision in the 1910s and 1920s and reburied, in the phrasing of the record, in another part of the district. A Globe headline from 1920 reads: <strong>"Indian Bones are Unearthed. Found by Workmen on Pavement Work in Baby Point District."</strong></p>
+    <p>The City's own 2024 research says the quiet part out loud:</p>
+    <blockquote>
+      <p>At the time, little consideration was given to the sacredness of these burials to their descendants.</p>
+      <cite>EVOQ Architecture, ASI and Eric Wright, for the City of Toronto, December 2024</cite>
+    </blockquote>
+    <p>Those descendants are alive. The Haudenosaunee, specifically Seneca; the Mississaugas of the Credit First Nation; and the Huron-Wendat all have live, documented interests in this ground. <strong>So walk it as a place people still belong to, not as a spooky discovery.</strong> Go down the public streets thinking about what is under them. Do not peer into gardens, and do not go looking for the houses. The report that documents all this does not name them and neither does this page.</p>
+  </div>
+
+  <div class="warnbox">
+    <h3>Three things to sort out first</h3>
+    <p><strong>You miss the good tour by six days, so try to fix that.</strong> Heritage Toronto runs "Baby Point Uncovered", ninety minutes over exactly this ground led by Emily Meikle, a working field archaeologist, for ten dollars. The 2026 dates are <strong>Sunday 9 August and Sunday 6 September</strong>. You land on the 15th. It is worth one email or call to 416-338-1338 asking whether a private booking is possible in your week. An hour and a half with an archaeologist beats anything written down, including this.</p>
+    <p><strong>Check the trail is open.</strong> No closure was found affecting the Étienne Brûlé Park to Baby Point stretch in August 2026, but that is not the same as confirmed open. Check the City's park alerts or ring 311 in the week before. Ignore any 2021 and 2022 closure notices that come up in searching, they were a sewer job and it finished.</p>
+    <p><strong>Old Mill station is a building site until 2028</strong> and has no lift to the platforms. Trains run normally, the pathway from Old Mill Road stays open, but expect hoarding and noise for the first two minutes. Weekday work runs 07:00 to 19:00.</p>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<section>
+  <h2>The argument</h2>
+  <p class="section-lede">A trail older than almost anything, a village that lasted fifteen years, and a suburb sold in Latin.</p>
+
+  <p>Start with the ground, because the ground did all of this. Twelve and a half thousand years ago the ice pulled back and left a lake, Lake Iroquois, whose shoreline reached up to where Casa Loma is now. Baby Point was underwater. Ten thousand years ago the lake found an outlet and dropped, the point emerged, and the Humber spent the next five thousand years cutting an oxbow through the old lakebed. That erosion is why Baby Point is a peninsula with a thirty metre bluff. <strong>The river built the platform, and everybody who came afterwards built on the platform the river made.</strong></p>
+
+  <p>Now the trail, and the fact that makes it interesting. The Toronto Carrying Place ran from Lake Ontario up to the Holland Marsh and on by water to Lake Simcoe, Georgian Bay and the upper lakes. It was one continuous carry of about 45 kilometres rather than a series of short ones, because the Humber itself was choked with timber and beaver dams and was no use to paddle. <strong>So this is a route that avoids the river it follows.</strong> The corridor is roughly eleven thousand years old.</p>
+
+  <p>And Baby Point is the hinge. In the City's words:</p>
+
+  <blockquote>
+    <p>Baby Point marks the approximate location at which the river was no longer navigable by canoe upstream. Baby Point was thus a natural starting place for a trail heading north from Lake Ontario along the banks of the Humber River.</p>
+    <cite>ASI for the City of Toronto, 2024</cite>
+  </blockquote>
+
+  <p>That is why Toronto is here. The British chose this site for the capital of Upper Canada partly because this route reached the upper Great Lakes while avoiding territory contested by the Americans. And the name came down the trail too: <em>tkaronto</em> is Mohawk, "the place where the trees grow over the water", and it originally meant Lake Simcoe, at the far end. It appears as "Taronto" on Louis Jolliet's 1673 map. <strong>The city is named after the other end of this footpath.</strong> The same map carries the first known European spelling of Teiaiagon.</p>
+
+  <p>The report puts the succession in one line that is worth carrying up the hill with you:</p>
+
+  <blockquote>
+    <p>To a degree, the Carrying Place Trail can be understood as Toronto's first iteration of a north-south trade route that has culminated today in Yonge Street and Highway 400.</p>
+    <cite>ASI for the City of Toronto, 2024</cite>
+  </blockquote>
+
+  <p>Then Teiaiagon itself, and the surprise is how brief it was. Established shortly after 1673, gone by about 1688. <strong>Fifteen years.</strong> Twenty to thirty longhouses and somewhere between five hundred and eight hundred people, primarily Seneca but including people from the other four Iroquois nations, Anishinaabe and Wendat. Almost certainly palisaded. Fed on salmon and eel from the lower Humber, game from the valley, and fields of corn, beans and squash, the three sisters, grown by the women, some on the point and some in the lowlands across the river. In 1684 La Salle wrote directions to it, and this is the best sentence in the whole archive:</p>
+
+  <blockquote>
+    <p>the road which leads to Lake Huron from the village of Teiaiagon.</p>
+    <cite>René-Robert Cavelier de La Salle, 1684</cite>
+  </blockquote>
+
+  <p>Read that again. A seventeenth century Frenchman giving directions, and the landmark is the village. Not the river, not the lake. The Seneca left in the late 1680s under French military pressure and returned to their homelands west of the Finger Lakes. Mississauga communities were on the lower Humber in the early 1700s and very probably on this site. The Haudenosaunee never relinquished their interest in the north shore, and hold it still under the Great Peace of Montréal, the Nanfan Treaty and the Dish with One Spoon.</p>
+
+  <p>One honest caveat, which the City states and this page repeats: <strong>the site was never systematically excavated before the neighbourhood was built on top of it.</strong> The picture is a synthesis of thin eyewitness accounts, preliminary digs and what is known of Seneca villages generally. A nineteenth century archaeologist found traces of a palisade and could not date it.</p>
+</section>
+
+<hr class="divider" />
+
+<section>
+  <h2>The walk</h2>
+  <p class="section-lede">Down to the river, north along it, up the bluff, across the top, then east to the pub.</p>
+
+  <div class="stop">
+    <div class="stop-head"><span class="num">Stop one</span><h3>The ruins that are not what you think</h3><span class="addr">45 Old Mill Road</span></div>
+    <div class="leg"><span>250 m from Old Mill station</span><span>3 min</span></div>
+    <p>Get this right, because nearly every casual source gets it wrong. The stone ruins here are <strong>not</strong> Simcoe's King's Mill of 1793. They are the remains of a <strong>seven storey flour mill built in 1848</strong> for William Gamble, built by William Tyrrell of Weston, and burned out in 1881. They were designated in 1983.</p>
+    <p>Simcoe's 1793 mill, the first industrial building in the settlement, was a rough low shed with a water-powered saw. It burned in 1803 and <strong>nothing of it survives above ground</strong>. Its own plaque contains the line worth stealing, because of what it casually admits: the British built their first industrial building here "within sight of the remains of Aboriginal villages and a French fur-trading post."</p>
+    <p>Look at the hotel next door while you are here, and specifically at its stone. Per the City's own brochure, the stones of the old mill now cover the outside of a wing of the Old Mill Inn. <strong>The ruin was partly quarried to dress the building named after it.</strong></p>
+    <div class="trap"><strong>Do not plan afternoon tea here on walking day.</strong> It is $60 a head, Thursday to Sunday at 15:00, indoors, no same-day booking, and <em>jeans and sportswear are not permitted</em>. It has been served since the tea garden opened in July 1914 and it is a nice idea, but it is a separate dressed-up outing. The dining room is Wednesday to Sunday only.</div>
+  </div>
+
+  <div class="stop">
+    <div class="stop-head"><span class="num">Stop two</span><h3>The Old Mill Bridge</h3><span class="addr">1916, at Catherine Street</span></div>
+    <div class="leg"><span>215 m</span><span>3 min</span></div>
+    <p>The best free thing on the site, and the neighbourhood's whole thesis cast in one structure.</p>
+    <p>In 1915 a steel truss bridge here was swept away by an ice jam. Every bridge on this spot since 1837 had been destroyed by ice or debris. The replacement, opened 1916, is one of the first concrete bridges in Ontario, and the engineer <strong>Frank Barber</strong> gave its arches <strong>triangular wedges at the bases, shaped to make ice and debris pass underneath</strong>. It is engineered specifically against the thing that killed all its predecessors, and it worked. It is still here, designated, and you are standing on it.</p>
+    <p>Then look at the stone facing. That is by <strong>Alfred Hirschfelder Chapman</strong>, who did the Princes' Gates and Holy Blossom Temple, and it deliberately imitates Ontario market-town stone bridges of 1850 to 1880. So: modern concrete engineering, dressed in a nostalgic stone skin, built to look older than it is. Which is exactly what the neighbourhood above you is. Hold that thought for stop six.</p>
+    <div class="trap"><strong>What you will not see in August.</strong> The City's brochure notes that fish migration can be watched from this bridge in spring and autumn, and that impressive ice jams form here in winter. Mid-August is neither. No salmon run, and none of the ice that destroyed every bridge here before this one. Worth knowing what the river is doing when you are not there.</div>
+  </div>
+
+  <div class="stop">
+    <div class="stop-head"><span class="num">Stop three</span><h3>Étienne Brûlé Park, and the river</h3><span class="addr">South entrance, off Old Mill Road</span></div>
+    <div class="leg"><span>40 m</span><span>1 min</span></div>
+    <p>Paved path, plenty of shade, a separate track for bikes, toilets. Walk north with the river on your left and the bluff building on your right.</p>
+    <p>Two things about the park's name. Brûlé <em>probably</em> came through in 1615. The park is named with more confidence than the record supports, and you will notice that the official signage is generally more certain about the Frenchman than about the people who made the trail he used.</p>
+    <p>And the reason this is a park at all is not aesthetic. It is half property deal and half catastrophe, and the catastrophe comes at the end of this walk.</p>
+    <p>The Humber was designated a Canadian Heritage River in 1999. It is Toronto's largest watershed, a corridor for migrating songbirds and monarchs, and holds more than sixty species of fish. The ghosts are the Atlantic salmon and the American eel, both of which fed Teiaiagon and both of which are effectively gone from here.</p>
+  </div>
+
+  <div class="stop">
+    <div class="stop-head"><span class="num">Stop four</span><h3>The Teiaiagon plaque</h3><span class="addr">On the river path below the point, and you may have to hunt for it</span></div>
+    <div class="leg"><span>roughly 1 km along the path</span><span>15 min</span></div>
+    <p>This is story circle eleven of The Shared Path, an interpretive route of thirteen circles and fifty-two signs along both banks, built by the City with La Société d'histoire de Toronto and the conservation authority. Nine of its panels were developed with the Huron-Wendat, the Six Nations of the Grand River and the Mississaugas of the New Credit, three each. That tri-nation structure is the right model and it deserves credit.</p>
+    <div class="trap"><strong>The recorded position of this plaque contradicts itself.</strong> The database coordinate puts it about a kilometre west of the Old Mill Bridge; its own written description says almost a kilometre north. One of them is wrong and it could not be resolved from a desk. It is the most important sign on the route, so keep your eyes open on the river path and allow a few minutes to find it.</div>
+    <p>When you get to it, read the last sentence twice, because for a piece of public bronze it is startlingly blunt:</p>
+    <blockquote>
+      <p>Development of the area has consistently resulted in the discovery of artifacts and grave sites.</p>
+      <cite>Teiaiagon plaque, The Shared Path</cite>
+    </blockquote>
+    <p>No euphemism at all. That sentence is the entire walk. Elsewhere the plaque is dated in the ordinary ways, "Aboriginal peoples" throughout, and it says "We know of this village in part from Europeans who visited it", which quietly makes European testimony the basis of knowing. Its population figure, "perhaps 1,000", is close to the current estimate and nowhere near the 5,000 you will find repeated online.</p>
+  </div>
+
+  <div class="stop">
+    <div class="stop-head"><span class="num">Stop five</span><h3>The climb</h3><span class="addr">Up the bluff, thirty metres, stairs</span></div>
+    <p>No apology for this one, just an explanation. The reason the village was up there is the reason you have to go up there: the point controlled the southern end of the trail, it was defended by these banks, and the river you have been walking beside stopped being navigable here. <strong>The climb is the content.</strong> Take it slowly.</p>
+    <div class="trap"><strong>The exact staircase was the one thing that could not be pinned down from a desk.</strong> Several access points exist. Heritage Toronto's archaeologist-led tour starts at the south end of Étienne Brûlé Park and covers only 1.2 km in ninety minutes, so the route it uses is near the park's southern end. Expect steep unpaved sections and steps, and be ready to try a second path.</div>
+  </div>
+
+  <div class="stop">
+    <div class="stop-head"><span class="num">Stop six</span><h3>Baby Point, and the slogan</h3><span class="addr">Baby Point Road and the crescent</span></div>
+    <p>You are on the village site. Ordinary public streets, no gate, large detached houses, deep gardens, mature trees. Nothing to see, which is the point.</p>
+    <p><strong>Robert Home Smith</strong> assembled about 3,100 acres of the Humber valley between 1908 and 1911, bought this estate from the Canadian government in 1911, and published his Humber Valley Surveys in 1912 under a slogan in Latin: <em>Angliae pars Anglia procul</em>. <strong>A bit of England far from England.</strong></p>
+    <p>He sold it with covenants that ran with the land: detached houses only, external walls of stone, brick or cement, plans approved by his own architect, no apartment houses, no trades or professions except doctors and dentists, no signs. And a detail that tells you everything about the man's eye: <strong>on the bank lots, no tree between the summit and the bottom of the bank could be cut without his written consent.</strong></p>
+    <p>When those covenants expired in April 1941, the township passed <strong>by-law 12,056</strong> that August to reimpose most of them. It is still in force. The gated feeling here is not a fence, it is a by-law, and it has been enforced for eighty-five years. Conn Smythe, who built Maple Leaf Gardens, put up a house on Baby Point Road in 1927. Vincent Massey lived here before he was Governor General.</p>
+    <p>The name is the other half of it. <strong>James Baby</strong> bought 114 acres here in 1820 and used the promontory part-time, for recreation. He never really lived on it. He held something like 115 official appointments, and he was an anti-abolitionist who voted against the 1793 Act to Limit Slavery in Upper Canada. <strong>That same year he bought an enslaved twelve-year-old boy at auction in Detroit.</strong> His father owned at least eighteen Black and Indigenous enslaved people. From 1830 until his death he was one of three trustees for the Six Nations of the Grand River, in a period when the trustees grossly mismanaged Six Nations money for their own benefit.</p>
+    <p>And then this, from the City's report:</p>
+    <blockquote>
+      <p>Today, no physical traces of the Baby and McNamara families' time of ownership remain.</p>
+      <cite>ASI for the City of Toronto, 2024</cite>
+    </blockquote>
+    <p>Nothing of his is left here except the name. And the name is the thing that displaced Teiaiagon on the map.</p>
+  </div>
+
+  <div class="stop">
+    <div class="stop-head"><span class="num">Stop seven</span><h3>Baby Point Crescent</h3><span class="addr">Walk it, do not look into gardens</span></div>
+    <p>The second grave, in 2006, was found on this street, during gas line maintenance. The City published that much in a public planning document, which is why it is here. It did not publish the house number and nor will this.</p>
+    <p>The first, in 1999, was a Seneca woman found during a gas line installation elsewhere on the point, buried with brass rings, a brass kettle holding a fragment of fur pelt, and a finely made antler comb. There is a detail in that story you cannot invent: <strong>the homeowner had already paid for an archaeological dig in her back garden, because she knew what this ground was. It found nothing. The grave was in the front garden, and a routine gas crew found it.</strong></p>
+    <p>The 2006 burial had with it a <strong>moose antler hair comb</strong>, carved as a combination of panther, bear, human and possibly rattlesnake. The figure is <strong>Mishipeshu</strong>, the underwater lynx, who fights the thunderbirds. Bill Woodworth, Mohawk of Six Nations, an architect and cultural historian, wrote the two best lines anyone has written about this place:</p>
+    <blockquote>
+      <p>Teiaiagon oversees a place of dangerous rapids in the course of the river.</p>
+      <p>The water lynx can be requested to lead us out of the chaos of rapids into calm waters.</p>
+      <cite>Bill Woodworth</cite>
+    </blockquote>
+    <p>The comb was repatriated and reburied with her. <strong>You cannot go and see it, and that is the correct outcome.</strong> Woodworth again, on all of the burials here:</p>
+    <blockquote>
+      <p>The spirits of our native ancestors, including their bodies and the remains of their longhouse lifestyle were 'returned to the earth' here.</p>
+      <cite>Bill Woodworth, via First Story Toronto</cite>
+    </blockquote>
+  </div>
+
+  <div class="stop">
+    <div class="stop-head"><span class="num">Stop eight</span><h3>The federal plaque</h3><span class="addr">East side of Humbercrest Boulevard, just north of Langmuir Crescent</span></div>
+    <p>Historic Sites and Monuments Board of Canada, so this is Ottawa speaking. Read the whole thing, then read the last sentence on its own:</p>
+    <blockquote>
+      <p>Although of lesser importance to British fur traders, it still contributed to the favourable position of the settlement which became Toronto.</p>
+      <cite>Toronto Carrying Place plaque, Historic Sites and Monuments Board of Canada</cite>
+    </blockquote>
+    <p>An eleven-thousand-year-old Indigenous route, appraised by how useful it was to British fur traders. That is the whole logic of settler heritage, cast in bronze, standing on the route itself. It also says "the Indian nations", and it applies the word "reputedly" to Haudenosaunee use of the trail while stating Brûlé's 1615 passage as fact, when his is the one that is only probable.</p>
+    <p>While you are on these streets, two ghosts are underfoot. In 1892 the western loop of the short-lived Toronto Belt Line Railway was cut north to south through here: it ran up what is now Humbercrest Lane, crossed Baby Point Road at about number 43, and curved west near 83 Humbercrest Boulevard. And one archaeologist argues the Carrying Place itself ran along Humberview Road and Humbercrest Boulevard. <strong>A dead Victorian railway and an eleven-thousand-year-old footpath, encoded in the same handful of residential streets.</strong></p>
+  </div>
+
+  <div class="stop">
+    <div class="stop-head"><span class="num">Stop nine</span><h3>The club, the church, and out</h3><span class="addr">Baby Point Road, then east to Jane Street</span></div>
+    <div class="leg"><span>1.4 km to Jane station</span><span>18 min</span></div>
+    <p>The <strong>Baby Point Club</strong> sits at Baby Point Road and the crescent, founded in November 1923 on green space Home Smith kept back, opened in May 1925 with a tennis match and lawn bowling, during which tea was served in a large marquee on the lawn. In 1930 the members bought the land for $4,500 with a covenant that it could never be used for anything but a recreation ground. It is one of only two resident-owned neighbourhood clubs in Toronto and it is private. Look from the street.</p>
+    <p><strong>Humbercrest United Church</strong>, at Baby Point Road and Thornhill Avenue, was begun in 1914 on land bought from Home Smith and has changed its name three times since. The 1951 wing has a vaulted ceiling and dove grey stone, and the acoustics are good enough that Tafelmusik has recorded in it. From its 1951 dedication booklet, the church "served this community during a period which was perhaps the most unstable of any recorded in the annals of history."</p>
+    <p>Then walk east on Baby Point Road to Jane Street and south to Bloor. <strong>Bryden's, 2455 Bloor Street West</strong>, is two minutes from Jane station and does local craft beer and real ale, which is the relevant detail. Open from noon every day of your week except Monday, when it opens at four. Coffee Tree Roastery at 2412 Bloor has been roasting its own for over thirty years and is right across the road if you want coffee instead.</p>
+    <div class="trap"><strong>Do not go up to Baby Point hungry.</strong> There is nothing to eat or drink up there and that is not an accident, it is the covenant that has banned trades and businesses since 1911.</div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<section>
+  <h2>The thing to think about on the way home</h2>
+  <p class="section-lede">Why this valley is green, and it is not because anyone thought a river deserved a park.</p>
+
+  <p>Home Smith gave the city 105 acres along the Humber in 1911, and in exchange the city built him a road and expropriated the riverside land he could not buy himself. <strong>The public park you just walked through was the consideration in a private developer's land deal.</strong></p>
+
+  <p>The rest was done by <strong>Hurricane Hazel</strong>, on the night of 14 to 15 October 1954. Over 210 millimetres of rain in two days. Eighty-one people died in Canada, still the worst death toll from a natural disaster in the country's history. Twenty bridges destroyed or damaged beyond repair. The Humber did most of the killing, and the worst of it happened on <strong>Raymore Drive</strong>, where the river tore away a footbridge, which redirected the whole flood down the street. Fourteen houses and 366 metres of road went, many with the occupants inside. <strong>Thirty-five of the eighty-one Canadian dead lived on that one street.</strong> At number 148, nine people from two families died, and the bodies of two-year-old Frank Edwards and three-month-old John Edwards were never found. The washed-away section was never rebuilt. Building there was forbidden. It is Raymore Park now.</p>
+
+  <p>After 1954 residential land across the floodplains was systematically turned into parkland. So the green corridor you have been walking all morning is the product of one developer's bargain and one catastrophe. <strong>Nobody designed it as a park for its own sake.</strong></p>
+
+  <p>Two footnotes that land well. The 1916 bridge you stood on survived Hazel, while twenty bridges in the region did not: Frank Barber's ice wedges held against the worst flood in two hundred years. And Holland Marsh, at the far end of the Carrying Place where the portage came down to the water for Lake Simcoe, flooded badly the same night. The storm hit both ends of the same eleven-thousand-year-old route in one go.</p>
+</section>
+
+<hr class="divider" />
+
+<section>
+  <h2>Two extras, if you want them</h2>
+
+  <p><strong>The Tuhbenahneequay Ancient Grove.</strong> Along Riverside Drive, on the high east bank, 150 large oaks were inventoried and municipally proclaimed under that name. The City's brochure calls them remnants from the time of the Carrying Place, and says Riverside Drive itself traces the path of the trail. Living trees, beside the route, old enough to have been there.</p>
+  <p>She was <strong>Tuhbenahneequay</strong>, also called Sarah Henry, daughter of the Mississauga chief Wahbanosay. The surveyor Augustus Jones married her while already legally married to Sarah Tekarihogen, and left her to raise their two sons alone. She raised them in Mississauga Ojibwe custom, and one of them was <strong>Peter Jones, Kahkewaquonaby</strong>, who became one of the most consequential Indigenous figures in nineteenth century Canada. From his own autobiography: "he married my mother, Tuhbenahneequay, daughter of Wahbanosay, a chief of the Messissauga Tribe of the Ojebway nation."</p>
+  <p>So: this neighbourhood is named for a man who bought a child and mismanaged Six Nations money. Two kilometres away a grove of oaks is named for a woman who was abandoned and raised a leader. Both names are on the City's own maps and neither needs any editorialising. It is worth going because, as the Black Outdoors project puts it, "There are few history plaques to Indigenous individuals in Toronto. There are plaques that show their collective history and presence, but the individuals are erased from the details."</p>
+  <div class="trap"><strong>Honest logistics.</strong> Riverside Drive is in Swansea, south of Bloor, about 1.5 km and 20 minutes from the Old Mill Bridge, so it is a detour in the wrong direction from Baby Point. Do it on the way out from the station, or on another day. Also unverified: how far the grove runs, and whether anything on the ground marks it at all.</div>
+
+  <p style="margin-top:34px"><strong>The full river to Lambton House.</strong> Instead of cutting east to Jane, carry on north through the park to Lundy Avenue and Lambton House at 4066 Old Dundas Street, the last surviving building of the vanished village of Lambton Mills: a stagecoach inn from 1847, the present building 1860. Prettier walking, and it adds about 1.6 km, mostly flat. Then the 40 Junction bus east on Dundas West to Dundas West station, one stop from Lansdowne.</p>
+  <div class="trap"><strong>But do not aim for a pint there.</strong> Lambton House opens by appointment or for events, and runs as a public pub on the <em>first Friday</em> of the month. That is 7 August and 4 September 2026. Your only Friday, the 21st, is the third. You miss it by the same kind of margin as the archaeologist's tour. Plan on looking at the outside, or ring 416-767-5472 and ask what else is on.</div>
+</section>
+
+<hr class="divider" />
+
+<section>
+  <h2>Where this came from</h2>
+  <p class="section-lede">Full corpus, with every unresolved point flagged, in <code>research/walking-tours/carrying-place.md</code>.</p>
+  <ul class="sources">
+    <li>The document this walk is built on: <a href="https://www.toronto.ca/wp-content/uploads/2025/01/9473-CityPlanning-Teiaiagon-Baby-Point-History-and-Evolution-December-2024.pdf">EVOQ Architecture, ASI and Eric Wright, <em>Teiaiagon-Baby Point History and Evolution</em>, December 2024</a>, prepared for the City of Toronto. It exists because First Nations communities told the City its first version of this history was not good enough, and it says so in its opening pages. ASI is Archaeological Services Inc., Ronald Williamson's firm, so this is effectively the Williamson source, free and online. It overrides Wikipedia, blogTO and the older blog accounts wherever they disagree.</li>
+    <li><a href="https://firststoryblog.wordpress.com/2013/10/30/teiaiagon-history-of-a-17th-century-haudenosaunee-village/">First Story Toronto on Teiaiagon</a>, and their <a href="https://firststoryblog.wordpress.com/aboutfirststory/">account of themselves</a>. Indigenous-led, based at the Native Canadian Centre of Toronto, begun in 1994 as the Great Indian Bus Tour led by Rodney Bobiwash and Heather Howard. Read for voice and perspective rather than for the population figures, which the 2024 research revises down. Bill Woodworth's words come through here and through Spacing's <em>50 Objects that Define Toronto</em>.</li>
+    <li><a href="https://www.heritagetoronto.org/event/baby-point-uncovered/">Heritage Toronto, "Baby Point Uncovered"</a>, the archaeologist-led tour of this exact ground that runs six days before you arrive. Ring them.</li>
+    <li>Plaque texts quoted verbatim via readtheplaque.com. Note that torontoplaques.com is dead; the .ca mirror works. The City's own Discovery Walk brochures cover The Shared Path, the oak grove and the park facilities.</li>
+    <li>Percy J. Robinson, <em>Toronto During the French Régime</em> (1933), which is where "Teiaiagon" is glossed as "it crosses the stream", and which is also the origin of a French fort at Baby Point that the 2024 research says there is no evidence for. Treat Robinson as a reliable source about 1933 and an unreliable one about 1673.</li>
+    <li>Hurricane Hazel figures from the Canadian Disaster Database and cross-checked encyclopedia entries.</li>
+    <li>Things widely repeated that are wrong, and are not repeated here: the ruins are <strong>not</strong> Simcoe's 1793 mill, the village had <strong>500 to 800</strong> people and not 5,000, there were <strong>two</strong> separate burials seven years apart rather than one discovery, there was <strong>no</strong> French fort on the point, and the Indigenous-designed pedestrian bridge people mention in the same breath as this walk is the Humber Bay Arch Bridge, 3.5 km south at the lake. If you do go and see it, the necessary companion fact is First Story's own verdict: despite consulting the Lac Seul artist Ahmoo Angeconeb, "there was not much First Nation input in the project and the architects on the project chose the designs."</li>
+    <li>The gap: <strong>Shawn Micallef's <em>Stroll</em></strong> may not cover this ground at all. Nothing by him on the Humber or Baby Point surfaced. The Historicist piece on the Old Mill Bridge that the City cites is by <strong>David Wencer</strong>, who is the writer to chase here rather than Jamie Bradburn.</li>
+  </ul>
+</section>
+
+</div>
+</body>
+</html>

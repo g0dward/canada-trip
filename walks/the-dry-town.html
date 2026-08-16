@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Dry Town: ninety-seven years without a drink</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f4f1ea;
+    --paper: #fbf9f4;
+    --ink: #1a1a17;
+    --muted: #6a655c;
+    --rule: #d7d1c4;
+    --accent: #2f5d50;
+    --accent-soft: #dfe6df;
+    --warm: #a8563a;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 17px; line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 72px 40px 120px; }
+  @media (max-width: 640px) { .wrap { padding: 44px 20px 80px; } }
+  h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; font-weight: 500; letter-spacing: -0.01em; margin: 0; }
+  h1 { font-size: clamp(38px, 5.4vw, 68px); line-height: 1.0; font-weight: 400; font-style: italic; }
+  h1 .roman { font-style: normal; }
+  h2 { font-size: clamp(26px, 3.6vw, 38px); line-height: 1.08; }
+  h3 { font-size: 22px; line-height: 1.25; }
+  p { margin: 0 0 16px; }
+  a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-soft); }
+  a:hover { border-bottom-color: var(--accent); }
+  .kicker { font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; }
+  .kicker a { border: 0; color: var(--accent); }
+  .lede { font-family: 'Fraunces', Georgia, serif; font-size: 21px; line-height: 1.5; color: var(--muted); max-width: 700px; margin: 26px 0 0; }
+  section { margin-top: 76px; }
+  section > h2 { margin-bottom: 10px; }
+  .section-lede { color: var(--muted); max-width: 720px; margin: 0 0 36px; }
+  hr.divider { border: 0; height: 1px; background: var(--rule); margin: 72px 0 0; }
+
+  .facts { border-top: 1px solid var(--ink); margin-top: 34px; }
+  .facts > div { display: grid; grid-template-columns: 130px 1fr; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--rule); font-size: 15px; }
+  .facts .k { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); padding-top: 3px; }
+
+  .map { aspect-ratio: 16 / 10; border: 1px solid var(--rule); overflow: hidden; background: var(--accent-soft); margin-top: 34px; }
+  .map iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+  .stop { padding: 34px 0 30px; border-bottom: 1px solid var(--rule); }
+  .stop-head { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+  .num { font-family: 'Fraunces', serif; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+  .stop h3 { font-size: 25px; }
+  .stop .addr { font-size: 13px; color: var(--muted); }
+  .stop p { margin: 14px 0 0; max-width: 760px; }
+  .leg { display: flex; flex-wrap: wrap; gap: 0 14px; margin-top: 14px; font-size: 13px; color: var(--muted); }
+  .leg span { padding-right: 14px; border-right: 1px solid var(--rule); }
+  .leg span:last-child { border-right: 0; padding-right: 0; }
+
+  blockquote { margin: 20px 0 0; padding: 0 0 0 20px; border-left: 2px solid var(--accent); max-width: 720px; }
+  blockquote p { font-family: 'Fraunces', Georgia, serif; font-size: 19px; line-height: 1.45; font-style: italic; margin: 0; }
+  blockquote cite { display: block; margin-top: 10px; font-family: 'Inter', sans-serif; font-size: 13px; font-style: normal; color: var(--muted); }
+
+  .trap { margin-top: 16px; padding: 11px 15px; background: #efe7dd; font-size: 14px; border-left: 2px solid var(--warm); max-width: 780px; }
+  .trap strong { color: var(--warm); }
+  .callout { margin-top: 32px; padding: 30px 34px; background: var(--accent); color: #eef3ee; }
+  .callout h3 { color: #fff; font-style: italic; font-size: 26px; }
+  .callout p { color: #cfe0d8; margin-top: 12px; max-width: 740px; }
+  .callout strong { color: #fff; }
+  .warnbox { margin-top: 28px; padding: 22px 26px; background: #ece7dc; border-left: 3px solid var(--muted); }
+  .warnbox h3 { font-size: 19px; margin-bottom: 8px; }
+  .warnbox p { font-size: 15px; margin-bottom: 8px; max-width: 780px; }
+  .warnbox p:last-child { margin-bottom: 0; }
+
+  table { width: 100%; border-collapse: collapse; margin-top: 24px; font-size: 15px; }
+  th { text-align: left; font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--ink); padding: 0 12px 8px 0; }
+  td { padding: 10px 12px 10px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  .scroller { overflow-x: auto; }
+  .sources { font-size: 14px; color: var(--muted); max-width: 800px; }
+  .sources li { margin-bottom: 9px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="kicker"><a href="../index.html">&larr; Ontario, 15 to 29 August</a> &middot; Walk three &middot; An evening</div>
+  <h1><span class="roman">Ninety-seven years</span> without a drink</h1>
+  <p class="lede">A man was killed walking home from a hotel in the winter of 1897. Because of it, this stretch of Dundas Street West went dry on 1 May 1904 and stayed dry until 2001. It was the last dry district in Toronto. The walk ends by crossing the line where it broke.</p>
+</header>
+
+<div class="facts">
+  <div><div class="k">Distance</div><div>3.0 km and about 40 minutes of walking, or 5.3 km and 71 minutes with the northern spur to the stockyards.</div></div>
+  <div><div class="k">Getting there</div><div>Lansdowne station, Line 2 west two stops to <strong>Keele</strong>, then 984 m north up Keele Street, about 13 minutes. Arrive that way on purpose: the strip opens up in front of you.</div></div>
+  <div><div class="k">Start at</div><div><strong>Around 17:30 on a weekday.</strong> The pub at the end does not open until 16:00 Monday to Friday, and sunset is about 20:10, so this gives you the bank buildings in evening light and the pint after dark.</div></div>
+  <div><div class="k">Pairs with</div><div>Dinner at Botham's, 2869 Dundas West, which is effectively the same doorway as the last stop.</div></div>
+</div>
+
+<div class="map">
+  <iframe loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=-79.4760,43.6600,-79.4560,43.6760&amp;layer=mapnik&amp;marker=43.66555,-79.46593" title="Route map, Junction, Dundas Street West at Keele"></iframe>
+</div>
+
+<hr class="divider" />
+
+<section>
+  <h2>The argument</h2>
+  <p class="section-lede">This was an independent city for one year and nineteen days. It went bankrupt, banned alcohol, and then pulled four chartered banks and some of the best architects in North America onto three hundred metres of high street.</p>
+
+  <p>The sequence is worth having straight, because almost every version you will read online gets a date wrong.</p>
+
+  <p>West Toronto Junction was a village by about 1884, a town by 1889, and in the boom years it was Toronto's Chicago: the Union Stock Yards opened a quarter-million-dollar complex at Keele and St Clair in 1903, and the meatpackers followed on a deal that gave them cheap land in exchange for buying all their livestock there for twenty-five years. A local historian, A. B. Rice, writing in 1943, divided the early years into three periods and the middle one is the phrase to carry with you. He called 1892 to 1897 the <strong>Slough of Despond</strong>. That is Bunyan, applied to a municipal bankruptcy.</p>
+
+  <p>Then the winter of 1897, and a man attacked and killed walking home from a night's drinking at the Subway Hotel on Keele Street. Citizens voted for a ban in the 1904 municipal elections and the law came into force on <strong>1 May 1904</strong>. Six hotels closed that day. The Junction became a city in its own right in April 1908, lasted, in the local historical society's lovely phrasing, "one year and nineteen days", and was swallowed by Toronto in 1909 with the alcohol restrictions carried over intact.</p>
+
+  <p>And then it just stayed dry. Through the century. Through four separate referendums that all failed, in 1966, 1972, 1984 and 1988. The strip was known locally in those decades as the Junkie Junction. The votes kept failing largely because of one man, and he is the reason this walk has a protagonist.</p>
+
+  <div class="callout">
+    <h3>William Temple, 1898 to 1988</h3>
+    <p>He kept the Junction dry almost single-handedly for most of a century. A veteran of the Second World War, of which he said only that he "had an uncomfortable war", and a CCF and then NDP man who once beat a sitting Ontario Premier at the ballot box.</p>
+    <p><strong>"Booze enslaves, corrupts, destroys the moral fibre of a community,"</strong> he said. He owned a single share in Hiram Walker, bought so that he could attend the shareholders' meetings and heckle. At one of them he stood up and shouted <strong>"Sheep, nothing but sheep!"</strong></p>
+    <p>He died in April 1988. The drys won that autumn's vote anyway, without him. "We did it for Bill," said Derwyn Foley of the local temperance federation. It took another nine years to beat him.</p>
+  </div>
+
+  <p>The end came in two halves, and this is the part the walk is built to land. On 10 November 1997 the area <strong>west of Keele Street</strong> voted to go wet. The area <strong>east of Keele</strong> stayed dry, twenty-four votes short of the sixty per cent it needed. Then in November 2000 the last holdout finally voted yes, by 76 per cent, on the question: "Are you in favour of the sales of spirits, beer and wine for consumption in licensed premises?" The first legal drink east of Keele was poured in 2001.</p>
+
+  <p>So: ninety-three years on one side of the street, ninety-seven on the other.</p>
+</section>
+
+<hr class="divider" />
+
+<section>
+  <h2>The walk</h2>
+  <p class="section-lede">Up Keele, west along Dundas past the banks, then back east to cross the line and have the pint.</p>
+
+  <div class="stop">
+    <div class="stop-head"><span class="num">Stop one</span><h3>The last mayor's semi</h3><span class="addr">261 Keele Street</span></div>
+    <div class="leg"><span>984 m north from Keele station</span><span>13 min</span></div>
+    <p>A semi-detached house from 1896. According to the City's heritage register this was the home of W. A. Baird, <strong>the last Mayor of West Toronto</strong>.</p>
+    <p>The last mayor of an independent city lived in half a house, four hundred metres from his own high street. Start here and the scale of the place explains itself without you having to say anything else about it.</p>
+  </div>
+
+  <div class="stop">
+    <div class="stop-head"><span class="num">Stop two</span><h3>Keele and Dundas, and the four banks</h3><span class="addr">2854 to 2947 Dundas Street West</span></div>
+    <div class="leg"><span>430 m to the corner, then 300 m west</span><span>10 min with looking</span></div>
+    <p>This is the set piece. Four chartered bank buildings inside about three hundred metres, all on the heritage register, all by real architects.</p>
+    <p><strong>2854, the Bank of Toronto, 1911</strong>, by Eustace Bird in association with Carrère and Hastings. That is the New York firm that built the New York Public Library. <strong>2859, the Bank of Montreal, 1907</strong>, Ellis and Connery, directly across the street. <strong>2947, the Dominion Bank, 1916</strong>, by John M. Lyle, who designed Union Station. And between them, the one this walk is really about, at stop three.</p>
+    <p>Ask why they are here. A town that had just gone bankrupt and then banned alcohol somehow attracted four banks and this quality of architecture. The answer is in the City's own numbers: the population went 7,071 in 1905, 8,563 in 1906, 10,200 in 1907, 12,000 by 1909. In 1907 the town council ran a surplus for the first time in fifteen years, and commercial land at Keele and Dundas hit prices not seen since the early 1890s. The banks were not decoration. They were following the money.</p>
+    <p>The City's own description of the street is the best short prose anyone has written about it: a Main Street pattern of two and three storey buildings, brick shopfronts with people living above them, punctuated by <strong>monumental stone banks and post offices</strong>. Look up and you can read exactly that.</p>
+  </div>
+
+  <div class="stop">
+    <div class="stop-head"><span class="num">Stop three</span><h3>The Molsons Bank</h3><span class="addr">2896 Dundas Street West</span></div>
+    <div class="leg"><span>82 m west of the Bank of Toronto</span><span>1 min</span></div>
+    <p>Stop properly at this one. It is the best fact on either Junction walk.</p>
+    <p>Built 1911 by Langley and Howland, who did three other Molsons Bank branches between 1909 and 1913. Two storeys, limestone, English Edwardian Classical, with a three-bay front, two unfluted Tuscan Doric columns and two broad rusticated piers. The City's designation report notes it has "an inventive rendering of a traditional entablature and cornice indicating its architects had a sophisticated knowledge of the classical language", which is a heritage officer getting slightly carried away, and fair enough.</p>
+    <p>Because here is the thing. The Molsons Bank was founded in 1853 by the Molson brewery family. <strong>This building went up in 1911, seven years into a total ban on the sale of alcohol, on the street where you could not buy a drink.</strong> And Molson money had been on this strip since 1888, sixteen years before the vote.</p>
+    <p>The grandest building on a dry street was paid for by beer.</p>
+    <div class="trap"><strong>Exterior only.</strong> The Canadian Bank of Commerce took it over in 1936, it was CIBC from 1961, sold in 2002 and briefly a second-hand shop called The Treasury, and the City records it as residential now. Do not go in.</div>
+  </div>
+
+  <div class="stop">
+    <div class="stop-head"><span class="num">Stop four</span><h3>Heintzman Street</h3><span class="addr">Off Dundas, north of the strip</span></div>
+    <div class="leg"><span>420 m back east</span><span>6 min</span></div>
+    <p>Theodore Heintzman started making pianos in Toronto around 1860 and opened a big new factory here in 1888: four storeys of brick with a water tower on the roof, three acres, two hundred workers by the 1890s and about a thousand pianos a year. The company owned the houses across the road from it. Operations left for Hanover, Ontario, in 1962.</p>
+    <p>The factory is gone. The site held a Canadian Tire and is now a condominium project. What survives is the street name, and, better, the houses: <strong>288 Annette Street, the Heintzman House, 1889</strong>, by Knox, Elliot and Jarvis, plus 166 High Park Avenue from 1891 and 23 Woodside Avenue from 1892. All three within about 700 m of this corner.</p>
+    <p>So the line for this stop is: you cannot see where the pianos were made, but you can go and look at what the pianos bought.</p>
+  </div>
+
+  <div class="stop">
+    <div class="stop-head"><span class="num">Stop five</span><h3>Heydon House, and where the cattle were</h3><span class="addr">1832 St Clair Avenue West &middot; the optional spur</span></div>
+    <div class="leg"><span>1.2 km north</span><span>17 min</span><span>adds 35 min return</span></div>
+    <p>This spur is optional, and it earns itself by doing two jobs at one address.</p>
+    <p><strong>Heydon House was built in 1891 by James A. Ellis, and it is one of the six hotels named in the City's own footnote as closing when the law came in on 1 May 1904.</strong> It is still standing and City-designated. Stand outside it and you are outside a hotel that lost its licence that morning.</p>
+    <p>You are also at Keele and St Clair, which is where the Union Stock Yards opened in 1903. This is the reason the town existed. At its peak, in the early 1970s, over 6,300 people worked in livestock and meatpacking in the immediate vicinity. It closed on New Year's Eve 1993, the last animals removed by the end of January, and the Globe and Mail called it "the largest in-city stockyards in North America", about eighty hectares. James Christie filed an elegy on deadline that day and got the mood exactly right:</p>
+    <blockquote>
+      <p>Everyone's a little happy and a little sad to see the stockyards go.</p>
+      <cite>James Christie, The Globe and Mail, 30 December 1993</cite>
+    </blockquote>
+    <p>Look north and west from here and what eighty hectares of cattle pens became is a Home Depot, a Canadian Tire and an open-air mall called Stock Yards Village. The scholarly book behind the history has the best title in Canadian economic writing: Ian MacLachlan's <em>Kill and Chill</em>.</p>
+    <div class="trap"><strong>If you skip the spur</strong>, tell it from the strip and point north. It is a kilometre up Keele, so it is a real detour, and the walk works without it. But this is the only stop on either tour that does two stories at once.</div>
+  </div>
+
+  <div class="stop">
+    <div class="stop-head"><span class="num">Stop six</span><h3>The Peacock</h3><span class="addr">2760 Dundas Street West</span></div>
+    <div class="leg"><span>1.4 km back south, or 300 m east if you skipped the spur</span></div>
+    <p>The second of the three surviving hotels, listed as the Peacock Hotel, 1889 to 1890. Also emptied by the 1904 law.</p>
+    <p>And the name goes back further than the building. An earlier Peacock Inn on this road was the scene of William Lyon Mackenzie's mail coach robbery in 1837, and J. Ross Robertson's <em>Landmarks of Toronto</em> carries a sketch of it. Two buildings, one name, the same corner of the world. The 1889 building is not the 1837 inn, so do not conflate them, but the continuity is real.</p>
+    <p>The third survivor, if you want the full set, is the <strong>Avenue Hotel of 1889, now 344 High Park Avenue</strong>, about 400 m west of the Dominion Bank. Three of the six hotels emptied on 1 May 1904 are still standing and you can walk to all three inside half an hour.</p>
+    <p>The two with the best stories are the ones that are gone: Brown's Hotel, the Occidental, and above all the <strong>Subway Hotel on Keele Street</strong>, where the drinking that ended in a man's death in 1897 started the whole thing. Its exact address is not recorded and it is not on the heritage register, so assume it was demolished. If you want somewhere to stand, use Keele Street between Dundas and the rail crossing, and know the building is not there.</p>
+  </div>
+
+  <div class="stop">
+    <div class="stop-head"><span class="num">Stop seven</span><h3>Where it actually ended</h3><span class="addr">Shoxs, 2827 Dundas Street West</span></div>
+    <div class="leg"><span>220 m east</span><span>3 min</span></div>
+    <p>This is the stop that closes the argument, and it is easy to walk straight past it.</p>
+    <p>Shoxs opened on 6 April 1995 as a deliberately dry cafe and billiard lounge, named for how shocked customers were to find they could not get a drink. Its co-owner, Gus Koutoumanos, ran the Yes campaign for the 2000 vote and gave the Globe and Mail the sentence that explains ninety-seven years in one go:</p>
+    <blockquote>
+      <p>No one has been interested in opening up a pub or restaurant in the area for decades.</p>
+      <cite>Gus Koutoumanos, 2000</cite>
+    </blockquote>
+    <p><strong>The first legal drink east of Keele Street was poured here in 2001.</strong> After renovations finished in December 2002 the place renamed itself SHOXS Sports Saloon, choosing the word "saloon" quite deliberately, to name the thing that had caused the ban in the first place.</p>
+  </div>
+
+  <div class="stop">
+    <div class="stop-head"><span class="num">Stop eight</span><h3>Cross the line, then have the pint</h3><span class="addr">The Hole in the Wall, 2867 Dundas Street West</span></div>
+    <div class="leg"><span>133 m west</span><span>2 min</span></div>
+    <p>Now walk two minutes west and pay attention to the moment you cross Keele Street, because you are stepping over the line that split this argument in two. Behind you is the half that stayed dry until November 2000. Ahead of you is the half that went wet three years earlier, in 1997. The two pubs are 133 metres apart with the boundary running between them.</p>
+    <p>The Hole in the Wall is on the 1997 side. It is small, brick, open until two in the morning, and it does live music. Its building is on the heritage register as the Alexander Chisholm Building, architect Simon Lark, and it was added to that register in April 1997, seven months before the vote that made the block around it wet.</p>
+    <p>One last thing, and it is a good one to know while you are standing outside. <strong>2869 Dundas West, the doorway next to it, is where the Junction's first bookstore and art gallery stood.</strong> It is Botham's now, which is where to eat. So the last two doors on this walk are the Junction's first bookshop and an 1890s building listed in the year the ban began to fall.</p>
+    <div class="trap"><strong>Ring ahead, all of them.</strong> August is the worst month in Toronto for independent closures and Junction businesses commonly take a week or two. The Hole in the Wall is on 647-883-7781, though oddly that is also the number listed for Botham's, so one call may settle both. Botham's hours conflict across every source found. Shoxs is a billiard lounge and its hours vary. Have a fallback in mind west of Keele, on the 1997 side, where there are simply more options.</div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<section>
+  <h2>One honest question to take home</h2>
+  <p>The Globe and Mail's <em>City Space</em> podcast did an episode on all this in 2024 and framed the cause as "a murder, a bar brawl and a sermon", which is about right. But it also asked the uncomfortable question, and it is worth carrying up Dundas with you: the Junction's revival is dated from the arrival of alcohol, and the arrival of alcohol is also the arrival of money. Is what happened here a neighbourhood getting its life back, or a neighbourhood being priced for people who wanted a wine list? Both, obviously. But the people who kept voting dry for ninety years were not only cranks, and some of them were poor, and the strip they were protecting was cheap.</p>
+  <p>Councillor Chris Korwin-Kuczynski, on the fears people raised in 2000 about the blocks that had already gone wet, gave the shortest possible rebuttal: "The problems did not materialize in the next door."</p>
+</section>
+
+<hr class="divider" />
+
+<section>
+  <h2>Where this came from</h2>
+  <p class="section-lede">Full corpus, with every conflict and unverified claim flagged, in <code>research/walking-tours/junction.md</code>.</p>
+  <ul class="sources">
+    <li><a href="https://jamiebradburnwriting.wordpress.com/2019/04/11/temperance-bill-temple-keeps-the-junction-dry/">Jamie Bradburn, "'Temperance Bill' Temple Keeps The Junction Dry"</a>, originally in <em>The Grid</em>, 2012. The best-written thing on this subject and the source of the Temple material, itself built on named <em>Toronto Star</em> and <em>Globe and Mail</em> reporting from 1979 and 1988.</li>
+    <li><a href="https://www.toronto.ca/wp-content/uploads/2025/02/8dbc-CityPlanning-West-Toronto-Junction-Historic-Context-Statement-Final-May-13-2020.pdf">City of Toronto, <em>West Toronto Junction Historic Context Statement</em></a>, May 2020, which settles the 1 May 1904 date and names all six hotels in a footnote. It in turn rests on Nancy Byers and Barbara Myrvold, <em>St. Clair West in Pictures</em> (Toronto Public Library Board, third edition 2008), which is the primary authority and is obtainable.</li>
+    <li><a href="https://www.toronto.ca/legdocs/mmis/2017/pb/bgrd/backgroundfile-109842.pdf">City of Toronto, Intention to Designate 2896 Dundas Street West</a>. This is where the Molsons Bank is documented properly, and it contradicts the Historic Context Statement's own property list, which misnames the building. The designation report wins.</li>
+    <li><a href="https://www.junctioneer.ca/2023/01/25/the-ontario-stock-yards-ceased-to-exist-on-new-years-eve-1993-a-great-article-on-its-closing-by-the-globe-and-mail/">James Christie, "The Ontario Stock Yards close," <em>The Globe and Mail</em>, 30 December 1993</a>. Behind it: Ian MacLachlan, <em>Kill and Chill: Restructuring Canada's Beef Commodity Chain</em> (University of Toronto Press, 2001).</li>
+    <li><a href="https://wtjhs.ca/junction-history/">West Toronto Junction Historical Society</a>, the primary local archive, source of the A. B. Rice periodisation and the "one year and nineteen days" line. Note their page says the dry period ran until 1996, which is wrong. Use 1997 and 2000.</li>
+    <li>Gay Abbate's <em>Globe and Mail</em> report of 15 November 2000 for the 76 per cent result and the ballot wording, and the Globe's <em>City Space</em> podcast episode "Prohibition's 100-year Hangover in a Toronto Neighbourhood" (Irene Galea, 2024) for the closing question.</li>
+    <li>Dates that circulate widely and are wrong: <strong>1903</strong> for the vote (it was the 1904 elections, in force 1 May 1904), <strong>1996</strong> for the end of the dry period, and <strong>80 per cent</strong> for the 2000 result. Also, and this matters for the ending: the Hole in the Wall does <em>not</em> sit in the block that held out until 2000. It is west of Keele, in the half that went wet in 1997. Shoxs is the 2000 side.</li>
+  </ul>
+</section>
+
+</div>
+</body>
+</html>

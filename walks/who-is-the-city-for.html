@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Who is the city for? A walk from the Distillery to St. Lawrence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f4f1ea;
+    --paper: #fbf9f4;
+    --ink: #1a1a17;
+    --muted: #6a655c;
+    --rule: #d7d1c4;
+    --accent: #2f5d50;
+    --accent-soft: #dfe6df;
+    --warm: #a8563a;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 17px; line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 72px 40px 120px; }
+  @media (max-width: 640px) { .wrap { padding: 44px 20px 80px; } }
+  h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; font-weight: 500; letter-spacing: -0.01em; margin: 0; }
+  h1 { font-size: clamp(38px, 5.4vw, 68px); line-height: 1.0; font-weight: 400; font-style: italic; }
+  h1 .roman { font-style: normal; }
+  h2 { font-size: clamp(26px, 3.6vw, 38px); line-height: 1.08; }
+  h3 { font-size: 22px; line-height: 1.25; }
+  p { margin: 0 0 16px; }
+  a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-soft); }
+  a:hover { border-bottom-color: var(--accent); }
+  .kicker { font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; }
+  .kicker a { border: 0; color: var(--accent); }
+  .lede { font-family: 'Fraunces', Georgia, serif; font-size: 21px; line-height: 1.5; color: var(--muted); max-width: 700px; margin: 26px 0 0; }
+  section { margin-top: 76px; }
+  section > h2 { margin-bottom: 10px; }
+  .section-lede { color: var(--muted); max-width: 720px; margin: 0 0 36px; }
+  hr.divider { border: 0; height: 1px; background: var(--rule); margin: 72px 0 0; }
+
+  .facts { border-top: 1px solid var(--ink); margin-top: 34px; }
+  .facts > div { display: grid; grid-template-columns: 130px 1fr; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--rule); font-size: 15px; }
+  .facts .k { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); padding-top: 3px; }
+
+  .map { aspect-ratio: 16 / 9; border: 1px solid var(--rule); overflow: hidden; background: var(--accent-soft); margin-top: 34px; }
+  .map iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+  .stop { padding: 34px 0 30px; border-bottom: 1px solid var(--rule); }
+  .stop-head { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+  .num { font-family: 'Fraunces', serif; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+  .stop h3 { font-size: 25px; }
+  .stop .addr { font-size: 13px; color: var(--muted); }
+  .stop p { margin: 14px 0 0; max-width: 760px; }
+  .leg { display: flex; flex-wrap: wrap; gap: 0 14px; margin-top: 14px; font-size: 13px; color: var(--muted); }
+  .leg span { padding-right: 14px; border-right: 1px solid var(--rule); }
+  .leg span:last-child { border-right: 0; padding-right: 0; }
+
+  blockquote { margin: 20px 0 0; padding: 0 0 0 20px; border-left: 2px solid var(--accent); max-width: 720px; }
+  blockquote p { font-family: 'Fraunces', Georgia, serif; font-size: 19px; line-height: 1.45; font-style: italic; margin: 0; }
+  blockquote cite { display: block; margin-top: 10px; font-family: 'Inter', sans-serif; font-size: 13px; font-style: normal; color: var(--muted); }
+
+  .trap { margin-top: 16px; padding: 11px 15px; background: #efe7dd; font-size: 14px; border-left: 2px solid var(--warm); max-width: 780px; }
+  .trap strong { color: var(--warm); }
+  .callout { margin-top: 32px; padding: 30px 34px; background: var(--accent); color: #eef3ee; }
+  .callout h3 { color: #fff; font-style: italic; font-size: 26px; }
+  .callout p { color: #cfe0d8; margin-top: 12px; max-width: 740px; }
+  .callout strong { color: #fff; }
+  .warnbox { margin-top: 28px; padding: 22px 26px; background: #ece7dc; border-left: 3px solid var(--muted); }
+  .warnbox h3 { font-size: 19px; margin-bottom: 8px; }
+  .warnbox p { font-size: 15px; margin-bottom: 8px; max-width: 780px; }
+  .warnbox p:last-child { margin-bottom: 0; }
+
+  table { width: 100%; border-collapse: collapse; margin-top: 24px; font-size: 15px; }
+  th { text-align: left; font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--ink); padding: 0 12px 8px 0; }
+  td { padding: 10px 12px 10px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  .scroller { overflow-x: auto; }
+  .sources { font-size: 14px; color: var(--muted); max-width: 800px; }
+  .sources li { margin-bottom: 9px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="kicker"><a href="../index.html">&larr; Ontario, 15 to 29 August</a> &middot; Walk one &middot; A weekday morning</div>
+  <h1><span class="roman">Who is</span> the city for?</h1>
+  <p class="lede">Two sites fifteen minutes apart, built by the same city a century apart, answering the same question in opposite directions. One is visited by millions. The other is visited by planning students and almost nobody else.</p>
+</header>
+
+<div class="facts">
+  <div><div class="k">Distance</div><div>2.6 km, about 32 minutes of actual walking. Budget two and a half to three hours on the ground.</div></div>
+  <div><div class="k">Getting there</div><div>Lansdowne station, Line 2 east to St George, Line 1 south to King, then the <strong>504A King streetcar east to Distillery Loop</strong>, which terminates inside the Distillery. Honestly 50 to 60 minutes door to door, not the 40 you would guess.</div></div>
+  <div><div class="k">Which day</div><div><strong>Tuesday 18, Wednesday 19, Thursday 20 or Friday 21.</strong> The market is shut on Mondays and both your Saturdays are gone to the flight and the hire car. Sunday 16 works and adds the antique market, but everything is busier.</div></div>
+  <div><div class="k">Start by</div><div><strong>10:30 at the latest.</strong> There is a country music festival in the Distillery every afternoon of your visit. More on that below, and it is good news.</div></div>
+  <div><div class="k">Ends at</div><div>A subterranean brew pub that has been going 36 years, three minutes from the subway home.</div></div>
+</div>
+
+<div class="map">
+  <iframe loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=-79.3810,43.6450,-79.3530,43.6530&amp;layer=mapnik&amp;marker=43.65080,-79.35667" title="Route map, Distillery District west to Berczy Park"></iframe>
+</div>
+
+<hr class="divider" />
+
+<section>
+  <h2>The argument</h2>
+  <p class="section-lede">This is the Barbican and Golden Lane walk, transplanted. Same trick: two answers to one question, close enough together that you can hold both in your head at once.</p>
+
+  <p>Gooderham and Worts was a company town. By 1877 the largest distillery in the world, with its own wharf, its own gasworks, its own railway spur, its own workers' cottages. It is now a pedestrianised precinct of galleries and restaurants, conserved to a standard almost nowhere in North America can match, and entirely commercial.</p>
+
+  <p>The St. Lawrence Neighbourhood, begun in 1974 on the railway land a few hundred metres west, is the opposite proposition. Roughly 3,500 homes. Nearly sixty per cent of them non-market. Laid out on a deliberately ordinary street grid, with no gates, no branding and no gift shop. Nobody visits it, because there is nothing there to visit. That is the achievement.</p>
+
+  <p>You are walking from the place that sells its past to the place that quietly still works. The sentence to carry with you was written in 1990 by a planning academic who lived in the second one:</p>
+
+  <blockquote>
+    <p>Displacement by gentrification is impossible in the St. Lawrence neighbourhood.</p>
+    <cite>J. David Hulchanski, 1990</cite>
+  </blockquote>
+
+  <p>That is a testable claim and it is thirty-six years old. Go and stand in it and decide whether it held.</p>
+</section>
+
+<hr class="divider" />
+
+<section>
+  <h2>Before you go</h2>
+
+  <div class="callout">
+    <h3>There is a mechanical bull in the National Historic Site</h3>
+    <p><strong>Toronto Country Fest runs 6 to 23 August, daily from 1pm</strong>, in the Distillery lanes. Live country music 1 to 4 and 5 to 8 on the Trinity Stage, cattle roping, carnival games, a tequila stand on Fridays and Saturdays. Your entire week falls inside it. It is free.</p>
+    <p>So: <strong>be there by 10:30 and be walking west out of it by 12:30</strong>, which gets you the cobbles and the brick and the morning light without a bull in shot. Weekday mornings before eleven are the quietest hours in the district anyway. Shops open between ten and noon, galleries around eleven.</p>
+    <p>But do not treat this as bad luck. You are walking into a place to ask whether it has been preserved or stuffed, and during precisely that fortnight the best-preserved collection of Victorian industrial architecture on the continent is hosting cattle roping. That is the strongest possible evidence for the prosecution and it is standing right there. The honest counter-argument is worth holding too: Gooderham and Worts was never a temple. It was a factory that sold alcohol at volume. Selling tequila to tourists in the same lanes is not obviously a betrayal of that. If there is a betrayal it is somewhere else, and the second half of the walk is where you find it.</p>
+  </div>
+
+  <div class="warnbox">
+    <h3>Two other things that have changed on the ground</h3>
+    <p><strong>David Crombie Park is a building site.</strong> A $26.6 million rebuild started in March 2026 and runs to 2028, and the blocks under construction this year are the ones you would otherwise walk through. Walk along The Esplanade instead, on the north side, looking south into the park and at the housing. The hoarding is not an obstacle, it is part of the answer: a fifty-year-old piece of public housing whose central park is being rebuilt at that price is a neighbourhood the city is still spending on.</p>
+    <p><strong>The Flatiron may be visible for the first time in over a year.</strong> It was wrapped in scaffolding and green netting from April 2025, and removal began in April 2026. It should be clear by August. Whether the mural on the back was restored, repainted or left alone is genuinely unknown, so do not go expecting it.</p>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<section>
+  <h2>The walk</h2>
+  <p class="section-lede">Ten stops, east to west. The streetcar drops you inside the first one and the last one is three minutes from the train home.</p>
+
+  <div class="stop">
+    <div class="stop-head"><span class="num">Stop one</span><h3>Distillery Loop</h3><span class="addr">Mill Street, where the 504A stops</span></div>
+    <p>Start with the thing you cannot see. A windmill stood near here in 1832, 22 metres of brick on the edge of Toronto Bay, built by James Worts, newly off the boat from England, with his brother-in-law William Gooderham. It became a symbol of the young city. Worts drowned two years later.</p>
+    <p>The whisky was an accident of thrift. In 1837 they added a still to convert surplus and second-grade grain from the flour mill into something sellable. Toronto's first permanent distillery began life as a way of not wasting flour.</p>
+  </div>
+
+  <div class="stop">
+    <div class="stop-head"><span class="num">Stop two</span><h3>The Stone Distillery</h3><span class="addr">55 Mill Street</span></div>
+    <div class="leg"><span>99 m from stop one</span><span>1 min</span></div>
+    <p>Five storeys of limestone, 1859 to 1861, by David Roberts Senior. It took the operation from 80,000 gallons a year to two million. In its first full year, 1862, it made 700,000 imperial gallons, a full quarter of every drop of spirits produced in Canada. By 1871, almost half of Ontario's.</p>
+    <p>In October 1869 the wooden interior burned out. The metre-thick walls held, and the grain stored on the roof collapsed into the fire and smothered it. They were running again by early 1870. The building was saved by its own product falling on the flames.</p>
+  </div>
+
+  <div class="stop">
+    <div class="stop-head"><span class="num">Stop three</span><h3>Trinity Street, the spine</h3><span class="addr">The cobbles</span></div>
+    <div class="leg"><span>222 m</span><span>3 min</span></div>
+    <p>The redbrick Cooperage and Maltings along the west side stand where the original windmill was pulled down in the early 1860s to make room. Most of the late Victorian buildings here are by David Roberts Junior. Remember that name. He turns up again at stop nine, four hundred metres and one entire argument later.</p>
+    <p>Here is what a company town actually looked like as plumbing. By 1880 Gooderham and Worts kept seven cattle sheds holding over four thousand cows on land east of the Don, and ran a pipeline alongside the railway track to pump the spent grain swill from this distillery to the cattle. Nothing wasted. Nothing outside the system. Grain went from railcar to whisky barrel, in their own phrase, without intervention by human hands.</p>
+    <p>The system had a downstream, of course. The waste went into the marshes of Ashbridge's Bay, and produced two decades of argument with the city and the people who lived near it.</p>
+    <p>Then: 1957, the last whisky. 1990, closed for good after 153 years. And now the part nobody mentions. <strong>From 1990 to 2001 this was the number one film location in Canada</strong>, second largest outside Hollywood, backdrop to more than 1,700 films and television productions, nicknamed Hollywood North's backlot. Before anyone sold it to you as heritage, it was already being rented out as scenery. It has been playing itself for thirty-five years.</p>
+    <p>Cityscape bought the thirteen acres in December 2001 for $15 million and opened to the public in May 2003, in the middle of the SARS outbreak, with the city empty and under a WHO travel advisory. They banned chain tenants on the ground floor, knowing full well the big names would pay more. They designed, in their own words, a <strong>three hour experience</strong>. That phrase is the honest answer to preservation or taxidermy: it is neither. It is a designed duration.</p>
+  </div>
+
+  <div class="stop">
+    <div class="stop-head"><span class="num">Stop four</span><h3>Parliament and Mill, the west edge</h3><span class="addr">Where you leave</span></div>
+    <div class="leg"><span>226 m</span><span>3 min</span></div>
+    <p>Stop at the edge and work out why there was any land to build a neighbourhood on. Between the 1830s and the 1950s the shoreline in front of the distillery moved about five hundred metres south. Some of it crept, as the company added a wharf in the 1840s and filled in around its grain elevator in the 1880s and 90s. Some of it leapt, when the Harbour Commission worked through its 1913 waterfront plan and the Toronto Terminals Railway threw up its raised viaduct in the 1920s.</p>
+    <p>So the ground you are about to walk on is manufactured. The nineteenth century made it for industry and railways and the twentieth century stopped needing it. That is the sentence that makes this walk work: <strong>the same economy built the distillery and, by receding, left the room for the housing.</strong></p>
+    <p>One more thing before you go. Parks Canada designated thirty buildings here in 1988, and its statement of heritage value protects, among other attributes, the physical relationships between the site and the railway to the south. The railway is part of the monument. And the railway is the reason the next half of this walk exists.</p>
+  </div>
+
+  <div class="stop">
+    <div class="stop-head"><span class="num">Stop five</span><h3>The Esplanade at Berkeley</h3><span class="addr">The east end of the neighbourhood</span></div>
+    <div class="leg"><span>169 m</span><span>2 min</span></div>
+    <p>Look around. It is a street. Ordinary sidewalks, ordinary front doors, ordinary corners. Hold on to how unremarkable it feels, because in 1974 building this was the radical act.</p>
+    <blockquote>
+      <p>They threw away much of what was being taught in planning, architecture and urban design courses about large residential projects. At the time this was a dramatic, bold, high risk decision. Having thrown away the textbooks, they had to write their own new textbook.</p>
+      <cite>J. David Hulchanski, 1990</cite>
+    </blockquote>
+    <p>What they threw away was the superblock: the raised deck, the tower in the park, the project you can identify as a project from three streets away. The things they were reacting against are all still standing in this city and you can go and look at them. Regent Park. Moss Park. Alexandra Park. St. James Town. Abroad, the counterfactual was Amsterdam's Bijlmermeer, which Hulchanski calls one of the great neighbourhood planning disasters of the 1970s, where many people only live as a last resort.</p>
+    <p>Instead: keep the city's ordinary street grid, so the new development blurs into the old fabric rather than announcing itself. Then read the section off the buildings in front of you. Three storeys of row houses on the inside streets. Eight to ten storey blocks along the traffic arteries, standing as a wall against the noise. No point towers. That was a decision, and you can see it in one glance.</p>
+    <p>One of the two lead planners, Frank Lewinberg, described the method to a conference in 1989 and it is the most useful thing anyone has said about how to build a neighbourhood:</p>
+    <blockquote>
+      <p>We said we don't know what the rules are. We don't even know what density means. What we are going to do here is try to draw and design the right kind of city or part of the city. Then we are going to go back and figure out how dense it is so that we can then create the rules. We worked from built form to density rather than the other way around.</p>
+      <cite>Frank Lewinberg, 1989</cite>
+    </blockquote>
+  </div>
+
+  <div class="stop">
+    <div class="stop-head"><span class="num">Stop six</span><h3>The Esplanade, along the park</h3><span class="addr">Frederick Street and west</span></div>
+    <div class="leg"><span>482 m</span><span>6 min</span></div>
+    <p>Walk the street, not the park, because two blocks of the park are hoarded off until December. A linear park runs six blocks down the spine of the neighbourhood and two schools use it for recess.</p>
+    <p>Now the numbers, which are the whole point. The tenure mix here: <strong>39 per cent condominium, 30 per cent co-operative and private non-profit, 27 per cent municipal non-profit, 4 per cent ownership townhouses.</strong> Nearly sixty per cent of the homes are non-market. And sixteen per cent of the units, about 575 homes, have their own front door onto the street, on some of the most expensive land in Canada.</p>
+    <p>So here is the exercise. Walk along and guess which buildings are the subsidised ones. You cannot. That indistinguishability is not a happy accident, it is the design brief. Hulchanski put the principle plainly, and it is worth reading twice because almost nobody builds this way now:</p>
+    <blockquote>
+      <p>Most private sector residential projects pride themselves on being 'exclusive' and use it as a marketing feature. The St. Lawrence planners sought to achieve the opposite.</p>
+      <cite>J. David Hulchanski, 1990</cite>
+    </blockquote>
+    <p>Be careful with the myth on your way through. You will read that Jane Jacobs planned this place. She did not. She had moved to Toronto in 1968 and was an unignorable public figure, and these are recognisably her ideas, but neither Hulchanski's assessment nor Lewinberg's own account mentions her once. What they credit is the reform movement they were part of. That is a more interesting sentence than the myth anyway: this is not the neighbourhood Jane Jacobs designed, it is the neighbourhood her ideas made thinkable, built by people who did not need to name her.</p>
+    <p>And do not let it become a hymn. Lewinberg was candid that the public consultation was thin, and that part of its value was political cover: when anybody complained the public was not involved, he said, we told them we had those guys there. The thing that actually made it happen was one impatient bureaucrat, Michael Dennis, keeping pressure on the process from day one. Announcement in May 1974 to approved plan and buildings underway in about eighteen months.</p>
+  </div>
+
+  <div class="stop">
+    <div class="stop-head"><span class="num">Stop seven</span><h3>The co-ops</h3><span class="addr">Jenoves Place and Albert Franck Place</span></div>
+    <div class="leg"><span>60 m, then 160 m</span><span>3 min</span></div>
+    <p>David B. Archer Co-operative was incorporated in 1977, one of the first non-profit co-ops built here, 190 units from bachelor to four-bedroom. Woodsworth Housing Co-operative was founded in 1979 by the Co-operative Housing Federation of Toronto and holds 194 homes across four streets: 85 mid-rise flats, 26 street-access houses on Wilton, 83 stacked and mews townhouses on George Street South and Albert Franck Place.</p>
+    <p>Woodsworth's own members describe their neighbourhood as created by the City of Toronto politicians, professional planners and community activists, and note that it was new, meaning it was built on waste land from the ground up. That is the resident's version and it is on their own website, which is the right way to hear from them.</p>
+    <div class="trap"><strong>This is people's housing, not a monument.</strong> Roughly 3,500 households, no visitor infrastructure of any kind, because none was ever needed. Look from the pavement. Do not go into lobbies, courtyards or stairwells, do not photograph windows or doors or people, and do not knock. Everything the argument needs is visible from the street.</div>
+    <p>Then the closing thought for this half, from the man who planned it, at that same 1989 conference:</p>
+    <blockquote>
+      <p>I do not know if one can really do evaluations until the planners are dead. We will wait another fifty years and we will come back and take a look at St. Lawrence and make some serious judgements then.</p>
+      <cite>Frank Lewinberg, 1989</cite>
+    </blockquote>
+    <p>He gave it fifty years. Thirteen are left. You are standing in the middle of his experiment with a bit under three quarters of the clock run down, and it looks like a nice street where people live.</p>
+  </div>
+
+  <div class="stop">
+    <div class="stop-head"><span class="num">Stop eight</span><h3>St. Lawrence Market</h3><span class="addr">93 Front Street East, south building</span></div>
+    <div class="leg"><span>348 m</span><span>4 min</span></div>
+    <p>The hinge of the walk, and the least glamorous answer to the question. There has been a public market on this site for more than two centuries. It is still municipally owned, still a working food market, and nobody had to rescue it or convert it into an experience. It just kept being a market.</p>
+    <p>The city is not always good at this, which is worth saying while you are standing here. The North Market across the street was demolished in 2015 and did not reopen until 2025, ten years in a temporary shed. The new building is five storeys with a market hall on the ground floor and Provincial Offences Court rooms above it.</p>
+    <div class="trap"><strong>On a weekday the north building is open but empty of stalls.</strong> The farmers are a Saturday event, from 5am, and the antique dealers a Sunday one. On a Tuesday to Friday you get the new hall as architecture and the south market as a working food hall. South market hours are 9am to 7pm Tuesday to Friday, closed Mondays.</div>
+    <p>Since April 2026 there has also been a brewery in the basement: C'est What Brewing at the Market, on the lower level of the south building, run with Durham Brewing. Its hours are not published anywhere, so it is a look-and-see rather than a plan. Its parent pub is where this walk ends.</p>
+    <p>Two hundred metres north at 157 King Street East is St. Lawrence Hall, generally dated 1850. It is a City-owned wedding and event venue now, so treat it as an exterior stop and do not count on getting in.</p>
+  </div>
+
+  <div class="stop">
+    <div class="stop-head"><span class="num">Stop nine</span><h3>The Gooderham Flatiron</h3><span class="addr">49 Wellington Street East</span></div>
+    <div class="leg"><span>319 m</span><span>4 min</span></div>
+    <p>Completed 1891, architect David Roberts Junior, the same man who built most of the late Victorian distillery you walked out of an hour ago. The circle closes here, and it closes twice.</p>
+    <p>First, the shape. Jamie Bradburn, the best popular historian this city has, puts it better than anyone:</p>
+    <blockquote>
+      <p>The unusual skinny, triangular shape, which predated New York's flatiron by a decade, was the result of the clash between Wellington Street's adherence to Toronto's square grid and Front Street's looser paralleling of the 19th century shoreline.</p>
+      <cite>Jamie Bradburn</cite>
+    </blockquote>
+    <p>Read that again with stop four in mind. The wedge is a fossil of the old shoreline. It is the <em>same shoreline</em> that moved five hundred metres south and left the ground the neighbourhood is built on. The geometry of this building and the existence of those 3,500 homes are one fact, seen from two ends.</p>
+    <p>Second, the man. George Gooderham's personal office was at the top of the semi-circular front tower, where he could look out over most of his business interests. He founded Manulife, ran the Bank of Toronto, financed the King Edward Hotel. Bradburn calls the building an apt symbol of the family's powerful position in the community, which is a polite way of saying a whisky baron built himself a turret to watch his city from.</p>
+    <p>Then he died in May 1905 and did something odd. He deliberately left most of a roughly $25 million estate exposed to Ontario succession duties, refusing to sell down his stocks, because he thought evading them was unconscionable. The duties wiped out the provincial deficit. Set a robber baron who chose to pay his tax against the question this walk is asking and it does real work.</p>
+    <p>On the west wall facing Berczy Park is the <em>Flatiron Mural</em>, Derek Michael Besant, installed September 1980. A trompe l'oeil façade that appears pinned to the brick with its edges fluttering loose, depicting the Perkins Block directly across the street. It cost $80,000, covers about the area of a double tennis court, and is 49 panels of aluminium composite painted in Awlgrip, a marine paint. Best detail: the heritage easement on this building protects the exterior <em>excluding the western façade</em>. A picture of the building opposite, hung on the back of a distillery baron's office block, painted in boat paint, on the one elevation nobody thought to protect.</p>
+  </div>
+
+  <div class="stop">
+    <div class="stop-head"><span class="num">Stop ten</span><h3>Berczy Park, then the pub</h3><span class="addr">C'est What, 67 Front Street East</span></div>
+    <div class="leg"><span>108 m to the park, 195 m to the pub</span><span>3 min</span></div>
+    <p>Berczy Park is where you stand to look at the mural, and it has the dog fountain, which is a pleasant thing to have in front of you after ninety minutes of housing policy.</p>
+    <p>Then two minutes east to C'est What, underground at 67 Front Street East. A brew pub that has been in that basement for over thirty-six years, which in Toronto restaurant terms is geological. Craft beer at scale, a whisky bar, comfort food, board games, live music, and a beer garden down Farquhars Lane. It opens at noon Tuesday to Friday, so it works whether you finish at one or at six. It is a pub rather than a destination, which is the correct register for the end of a long walk, and your nice dinner is booked somewhere else anyway.</p>
+    <p>King station is three minutes from the park. Line 1 north to St George, Line 2 west to Lansdowne.</p>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<section>
+  <h2>A shape for the day</h2>
+  <div class="scroller">
+    <table>
+      <thead><tr><th>Time</th><th>Where</th></tr></thead>
+      <tbody>
+        <tr><td>09:15</td><td>Leave 800 Lansdowne. Walk to Lansdowne station, about 11 minutes.</td></tr>
+        <tr><td>10:15</td><td>504A drops you at Distillery Loop. Stops one to three while it is quiet.</td></tr>
+        <tr><td>12:30</td><td>Walking west out of Mill Street before the country fest kicks off. Or stay for it, if you want the punchline.</td></tr>
+        <tr><td>13:00</td><td>The market. Lunch here is the obvious move.</td></tr>
+        <tr><td>14:30</td><td>Flatiron, Berczy Park, then C'est What.</td></tr>
+        <tr><td>16:00</td><td>Home, or carry on somewhere from the main list.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="warnbox">
+    <h3>Check on the morning</h3>
+    <p><strong>Streetcar diversions in Toronto change weekly.</strong> The 504 King had no diversions as of 1 August and the big King Street West closure does not start until 1 November, well after you fly home, but overnight track work on this corridor is constant and weekend subway closures get announced late. Use the TTC trip planner or Transit on the day rather than trusting this page. <a href="https://stevemunro.ca/where-is-my-streetcar-spring-fall-2026-edition/">Steve Munro's streetcar tracker</a> is the best independent source.</p>
+    <p><strong>And ring the pub.</strong> August is peak holiday-closure month in this city and a page written in advance is not a guarantee. C'est What is 416-867-9499. Thirty-six years in business is the safest bet available, which is part of why it is the recommendation.</p>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<section>
+  <h2>Where this came from</h2>
+  <p class="section-lede">Everything quoted above is quoted from something someone actually wrote, not from a guidebook paraphrase. The full corpus, with the unverified bits flagged, is in <code>research/walking-tours/st-lawrence.md</code>.</p>
+  <ul class="sources">
+    <li>The backbone, and it is free: <a href="https://tspace.library.utoronto.ca/bitstreams/3ed91c9a-6438-4b1e-a0ed-1e0fc94e73be/download">J. David Hulchanski, "Planning New Urban Neighbourhoods: Lessons from Toronto's St. Lawrence Neighbourhood"</a>, in David L. A. Gordon (ed.), <em>Directions for New Urban Neighbourhoods: Learning from St. Lawrence</em>, conference proceedings, Ryerson, November 1989, published 1990. The tenth-anniversary assessment, written by someone who lived there, delivered to a room containing the people who built it. Frank Lewinberg's panel remarks are in the same volume. Nobody uses this and it is better than any of the books.</li>
+    <li><a href="https://www.canadianarchitect.com/learning-from-the-distillery-district/">Michael McClelland, "Learning from the Distillery District"</a>, <em>Canadian Architect</em>, January 2005. The conservation architect who did the conversion, defending it in an architecture journal rather than a press release.</li>
+    <li><a href="https://jamiebradburnwriting.wordpress.com/2018/12/13/a-gooderham-gallery/">Jamie Bradburn, "A Gooderham Gallery"</a>, 2018, for the Flatiron.</li>
+    <li>Vanessa Mathews, "Toronto's Distillery District: Consumption and Nostalgia in a Post-Industrial Landscape," <em>Globalizations</em> 7:3 (2010). The academic critique, which names the commodification question and then refuses the easy verdict. Paraphrased here rather than quoted, because the PDF is paywalled and the wording available online is second-hand.</li>
+    <li>The co-ops' own sites, written by their own members: <a href="https://www.woodsworthcoop.ca/">Woodsworth</a> and <a href="https://davidbarcherco-op.ca/">David B. Archer</a>.</li>
+    <li>Parks Canada's National Historic Site record, the City of Toronto's Distillery Heritage Conservation District study (Taylor Hazell, 2016), and the City's David Crombie Park revitalisation pages for the construction phasing.</li>
+    <li>Two books that should be in this list and are not, because both are behind lending walls and paraphrasing them with quote marks would be dishonest: John Sewell, <em>The Shape of the City</em> (1993), and Robert Fulford, <em>Accidental City</em> (1995). Sewell was mayor while this neighbourhood was being occupied. Worth borrowing properly.</li>
+  </ul>
+</section>
+
+</div>
+</body>
+</html>
