@@ -83,6 +83,10 @@
   table { width: 100%; border-collapse: collapse; margin-top: 24px; font-size: 15px; }
   th { text-align: left; font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--ink); padding: 0 12px 8px 0; }
   td { padding: 10px 12px 10px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  .maplink { display:inline-block; margin-left:8px; padding:3px 9px; font-size:10px; font-weight:600;
+             letter-spacing:.09em; text-transform:uppercase; color:var(--accent); border:1px solid var(--rule);
+             border-radius:3px; vertical-align:middle; white-space:nowrap; }
+  .maplink:hover { border-color:var(--accent); background:var(--accent-soft); }
   .scroller { overflow-x: auto; }
   .sources { font-size: 14px; color: var(--muted); max-width: 800px; }
   .sources li { margin-bottom: 9px; }
@@ -178,7 +182,7 @@
   <p class="section-lede">Down to the river, north along it, up the bluff, across the top, then east to the pub.</p>
 
   <div class="stop">
-    <div class="stop-head"><span class="num">Stop one</span><h3>The ruins that are not what you think</h3><span class="addr">45 Old Mill Road</span></div>
+    <div class="stop-head"><span class="num">Stop one</span><h3>The ruins that are not what you think</h3><span class="addr">45 Old Mill Road</span><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=43.65120%2C-79.49379" target="_blank" rel="noopener">Map</a></div>
     <div class="leg"><span>250 m from Old Mill station</span><span>3 min</span></div>
     <p>Get this right, because nearly every casual source gets it wrong. The stone ruins here are <strong>not</strong> Simcoe's King's Mill of 1793. They are the remains of a <strong>seven storey flour mill built in 1848</strong> for William Gamble, built by William Tyrrell of Weston, and burned out in 1881. They were designated in 1983.</p>
     <p>Simcoe's 1793 mill, the first industrial building in the settlement, was a rough low shed with a water-powered saw. It burned in 1803 and <strong>nothing of it survives above ground</strong>. Its own plaque contains the line worth stealing, because of what it casually admits: the British built their first industrial building here "within sight of the remains of Aboriginal villages and a French fur-trading post."</p>
@@ -187,7 +191,7 @@
   </div>
 
   <div class="stop">
-    <div class="stop-head"><span class="num">Stop two</span><h3>The Old Mill Bridge</h3><span class="addr">1916, at Catherine Street</span></div>
+    <div class="stop-head"><span class="num">Stop two</span><h3>The Old Mill Bridge</h3><span class="addr">1916, at Catherine Street</span><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=43.65136%2C-79.49157" target="_blank" rel="noopener">Map</a></div>
     <div class="leg"><span>215 m</span><span>3 min</span></div>
     <p>The best free thing on the site, and the neighbourhood's whole thesis cast in one structure.</p>
     <p>In 1915 a steel truss bridge here was swept away by an ice jam. Every bridge on this spot since 1837 had been destroyed by ice or debris. The replacement, opened 1916, is one of the first concrete bridges in Ontario, and the engineer <strong>Frank Barber</strong> gave its arches <strong>triangular wedges at the bases, shaped to make ice and debris pass underneath</strong>. It is engineered specifically against the thing that killed all its predecessors, and it worked. It is still here, designated, and you are standing on it.</p>
@@ -196,7 +200,7 @@
   </div>
 
   <div class="stop">
-    <div class="stop-head"><span class="num">Stop three</span><h3>Étienne Brûlé Park, and the river</h3><span class="addr">South entrance, off Old Mill Road</span></div>
+    <div class="stop-head"><span class="num">Stop three</span><h3>Étienne Brûlé Park, and the river</h3><span class="addr">South entrance, off Old Mill Road</span><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=43.65149%2C-79.49115" target="_blank" rel="noopener">Map</a></div>
     <div class="leg"><span>40 m</span><span>1 min</span></div>
     <p>Paved path, plenty of shade, a separate track for bikes, toilets. Walk north with the river on your left and the bluff building on your right.</p>
     <p>Two things about the park's name. Brûlé <em>probably</em> came through in 1615. The park is named with more confidence than the record supports, and you will notice that the official signage is generally more certain about the Frenchman than about the people who made the trail he used.</p>
@@ -205,7 +209,7 @@
   </div>
 
   <div class="stop">
-    <div class="stop-head"><span class="num">Stop four</span><h3>The Teiaiagon plaque</h3><span class="addr">On the river path below the point, and you may have to hunt for it</span></div>
+    <div class="stop-head"><span class="num">Stop four</span><h3>The Teiaiagon plaque</h3><span class="addr">On the river path below the point, and you may have to hunt for it</span><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=43.65290%2C-79.50142" target="_blank" rel="noopener">Map</a></div>
     <div class="leg"><span>roughly 1 km along the path</span><span>15 min</span></div>
     <p>This is story circle eleven of The Shared Path, an interpretive route of thirteen circles and fifty-two signs along both banks, built by the City with La Société d'histoire de Toronto and the conservation authority. Nine of its panels were developed with the Huron-Wendat, the Six Nations of the Grand River and the Mississaugas of the New Credit, three each. That tri-nation structure is the right model and it deserves credit.</p>
     <div class="trap"><strong>The recorded position of this plaque contradicts itself.</strong> The database coordinate puts it about a kilometre west of the Old Mill Bridge; its own written description says almost a kilometre north. One of them is wrong and it could not be resolved from a desk. It is the most important sign on the route, so keep your eyes open on the river path and allow a few minutes to find it.</div>
@@ -218,13 +222,13 @@
   </div>
 
   <div class="stop">
-    <div class="stop-head"><span class="num">Stop five</span><h3>The climb</h3><span class="addr">Up the bluff, thirty metres, stairs</span></div>
+    <div class="stop-head"><span class="num">Stop five</span><h3>The climb</h3><span class="addr">Up the bluff, thirty metres, stairs</span><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=43.65149%2C-79.49115" target="_blank" rel="noopener">Map</a></div>
     <p>No apology for this one, just an explanation. The reason the village was up there is the reason you have to go up there: the point controlled the southern end of the trail, it was defended by these banks, and the river you have been walking beside stopped being navigable here. <strong>The climb is the content.</strong> Take it slowly.</p>
     <div class="trap"><strong>The exact staircase was the one thing that could not be pinned down from a desk.</strong> Several access points exist. Heritage Toronto's archaeologist-led tour starts at the south end of Étienne Brûlé Park and covers only 1.2 km in ninety minutes, so the route it uses is near the park's southern end. Expect steep unpaved sections and steps, and be ready to try a second path.</div>
   </div>
 
   <div class="stop">
-    <div class="stop-head"><span class="num">Stop six</span><h3>Baby Point, and the slogan</h3><span class="addr">Baby Point Road and the crescent</span></div>
+    <div class="stop-head"><span class="num">Stop six</span><h3>Baby Point, and the slogan</h3><span class="addr">Baby Point Road and the crescent</span><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=43.65680%2C-79.49429" target="_blank" rel="noopener">Map</a></div>
     <p>You are on the village site. Ordinary public streets, no gate, large detached houses, deep gardens, mature trees. Nothing to see, which is the point.</p>
     <p><strong>Robert Home Smith</strong> assembled about 3,100 acres of the Humber valley between 1908 and 1911, bought this estate from the Canadian government in 1911, and published his Humber Valley Surveys in 1912 under a slogan in Latin: <em>Angliae pars Anglia procul</em>. <strong>A bit of England far from England.</strong></p>
     <p>He sold it with covenants that ran with the land: detached houses only, external walls of stone, brick or cement, plans approved by his own architect, no apartment houses, no trades or professions except doctors and dentists, no signs. And a detail that tells you everything about the man's eye: <strong>on the bank lots, no tree between the summit and the bottom of the bank could be cut without his written consent.</strong></p>
@@ -239,7 +243,7 @@
   </div>
 
   <div class="stop">
-    <div class="stop-head"><span class="num">Stop seven</span><h3>Baby Point Crescent</h3><span class="addr">Walk it, do not look into gardens</span></div>
+    <div class="stop-head"><span class="num">Stop seven</span><h3>Baby Point Crescent</h3><span class="addr">Walk it, do not look into gardens</span><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=43.65567%2C-79.49622" target="_blank" rel="noopener">Map</a></div>
     <p>The second grave, in 2006, was found on this street, during gas line maintenance. The City published that much in a public planning document, which is why it is here. It did not publish the house number and nor will this.</p>
     <p>The first, in 1999, was a Seneca woman found during a gas line installation elsewhere on the point, buried with brass rings, a brass kettle holding a fragment of fur pelt, and a finely made antler comb. There is a detail in that story you cannot invent: <strong>the homeowner had already paid for an archaeological dig in her back garden, because she knew what this ground was. It found nothing. The grave was in the front garden, and a routine gas crew found it.</strong></p>
     <p>The 2006 burial had with it a <strong>moose antler hair comb</strong>, carved as a combination of panther, bear, human and possibly rattlesnake. The figure is <strong>Mishipeshu</strong>, the underwater lynx, who fights the thunderbirds. Bill Woodworth, Mohawk of Six Nations, an architect and cultural historian, wrote the two best lines anyone has written about this place:</p>
@@ -256,7 +260,7 @@
   </div>
 
   <div class="stop">
-    <div class="stop-head"><span class="num">Stop eight</span><h3>The federal plaque</h3><span class="addr">East side of Humbercrest Boulevard, just north of Langmuir Crescent</span></div>
+    <div class="stop-head"><span class="num">Stop eight</span><h3>The federal plaque</h3><span class="addr">East side of Humbercrest Boulevard, just north of Langmuir Crescent</span><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=43.65593%2C-79.49281" target="_blank" rel="noopener">Map</a></div>
     <p>Historic Sites and Monuments Board of Canada, so this is Ottawa speaking. Read the whole thing, then read the last sentence on its own:</p>
     <blockquote>
       <p>Although of lesser importance to British fur traders, it still contributed to the favourable position of the settlement which became Toronto.</p>
@@ -267,7 +271,7 @@
   </div>
 
   <div class="stop">
-    <div class="stop-head"><span class="num">Stop nine</span><h3>The club, the church, and out</h3><span class="addr">Baby Point Road, then east to Jane Street</span></div>
+    <div class="stop-head"><span class="num">Stop nine</span><h3>The club, the church, and out</h3><span class="addr">Baby Point Road, then east to Jane Street</span><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=43.65839%2C-79.49014" target="_blank" rel="noopener">Map</a></div>
     <div class="leg"><span>1.4 km to Jane station</span><span>18 min</span></div>
     <p>The <strong>Baby Point Club</strong> sits at Baby Point Road and the crescent, founded in November 1923 on green space Home Smith kept back, opened in May 1925 with a tennis match and lawn bowling, during which tea was served in a large marquee on the lawn. In 1930 the members bought the land for $4,500 with a covenant that it could never be used for anything but a recreation ground. It is one of only two resident-owned neighbourhood clubs in Toronto and it is private. Look from the street.</p>
     <p><strong>Humbercrest United Church</strong>, at Baby Point Road and Thornhill Avenue, was begun in 1914 on land bought from Home Smith and has changed its name three times since. The 1951 wing has a vaulted ceiling and dove grey stone, and the acoustics are good enough that Tafelmusik has recorded in it. From its 1951 dedication booklet, the church "served this community during a period which was perhaps the most unstable of any recorded in the annals of history."</p>
