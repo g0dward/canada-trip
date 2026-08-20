@@ -6,6 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Eat the Layers: Chinatown to Ossington</title>
 <link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </head>
 <body id="top">
 <nav class="topnav"><div class="nav-inner">
@@ -34,8 +36,15 @@
   <div><div class="k">Ends at</div><div>Third-wave espresso, or a brewery patio, on Ossington. Your choice of final layer.</div></div>
 </div>
 
-<div class="map">
-  <iframe loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=-79.4290,43.6460,-79.3900,43.6600&amp;layer=mapnik&amp;marker=43.65505,-79.39840" title="Route map, Chinatown through Kensington to Ossington"></iframe>
+<div id="walkmap"></div>
+
+<div class="routelist">
+  <a href="#stop1"><span class="n">1</span><span>Mashion Bakery, 345 Spadina</span><span class="what">egg tart &middot; cash</span></a>
+  <a href="#stop2"><span class="n">2</span><span>Anshei Minsk, 10 St Andrew</span><span class="what">walk past</span></a>
+  <a href="#stop3"><span class="n">3</span><span>Golden Patty, 187 Baldwin</span><span class="what">beef patty</span></a>
+  <a href="#stop4"><span class="n">4</span><span>Pancho's Bakery, Augusta</span><span class="what">churros</span></a>
+  <a href="#stop5"><span class="n">5</span><span>Caldense v Nova Era, Dundas W</span><span class="what">nata duel</span></a>
+  <a href="#stop6"><span class="n">6</span><span>Misc Coffee or Bellwoods, Ossington</span><span class="what">the ending</span></a>
 </div>
 
 <hr class="divider" />
@@ -54,47 +63,55 @@
 <section>
   <h2>The walk</h2>
 
-  <div class="stop">
-    <div class="stop-head"><span class="num">Stop one</span><h3>Mashion Bakery</h3><span class="addr">345 Spadina Ave &middot; the Chinese layer</span><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Mashion%20Bakery%2C%20345%20Spadina%20Ave%2C%20Toronto%2C%20Ontario" target="_blank" rel="noopener">Map</a></div>
+  <div class="stop" id="stop1">
+    <div class="stop-head"><span class="num">Stop one</span><h3>Mashion Bakery</h3><span class="addr">345 Spadina Ave &middot; the Chinese layer</span><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Mashion%20Bakery%2C%20345%20Spadina%20Ave%2C%20Toronto%2C%20Ontario" target="_blank" rel="noopener">Map</a><a class="maplink" href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=43.65531%2C-79.39869" target="_blank" rel="noopener">Street view</a></div>
     <p>Open since 2011, daily 9 to 9, and famous for prices that ignore the decade: buns that opened at three for a dollar and still hover around fifty cents, egg tarts about the same. Get one <strong>pastry-crust egg tart</strong>, one <strong>pineapple bun</strong>, and something savoury for ballast. This is the working Chinatown bakery, queue of locals and all, standing in for the two famous ones that didn't survive.</p>
+    <details class="more"><summary>More</summary>
     <p>Before you leave Spadina, look north a block: <strong>315 to 325 Spadina</strong> is the development block that triggered the 2019 fight for Chinatown's future, and the plan that answers it passed council three weeks ago. The full story is on the <a href="the-arrival-city.html">Arrival City page</a>; here it is just the view with your tart.</p>
     <div class="trap"><strong>Cash.</strong> Card acceptance is inconsistent and the prices barely justify the terminal fee. There is an ATM down the block.</div>
+    </details>
   </div>
 
-  <div class="stop">
-    <div class="stop-head"><span class="num">Stop two</span><h3>Into the Market, past the Minsker</h3><span class="addr">10 St Andrew St &middot; the Jewish layer</span><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=43.65445%2C-79.39951" target="_blank" rel="noopener">Map</a></div>
+  <div class="stop" id="stop2">
+    <div class="stop-head"><span class="num">Stop two</span><h3>Into the Market, past the Minsker</h3><span class="addr">10 St Andrew St &middot; the Jewish layer</span><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=43.65445%2C-79.39951" target="_blank" rel="noopener">Map</a><a class="maplink" href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=43.65445%2C-79.39951" target="_blank" rel="noopener">Street view</a></div>
     <div class="leg"><span>200 m</span><span>3 min</span></div>
     <p>Enter Kensington along St Andrew Street, the way the Jewish community did from 1905, and pass <strong>Anshei Minsk</strong>, the 1930 Byzantine Revival synagogue that served the Spadina garment trade. The layer that founded the Market did not leave a bakery on this route; it left the Market itself, and the shop-grafted-onto-a-house architecture every later arrival baked inside.</p>
   </div>
 
-  <div class="stop">
-    <div class="stop-head"><span class="num">Stop three</span><h3>Golden Patty</h3><span class="addr">187 Baldwin St &middot; the Caribbean layer</span><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Golden%20Patty%2C%20187%20Baldwin%20St%2C%20Toronto%2C%20Ontario" target="_blank" rel="noopener">Map</a></div>
+  <div class="stop" id="stop3">
+    <div class="stop-head"><span class="num">Stop three</span><h3>Golden Patty</h3><span class="addr">187 Baldwin St &middot; the Caribbean layer</span><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Golden%20Patty%2C%20187%20Baldwin%20St%2C%20Toronto%2C%20Ontario" target="_blank" rel="noopener">Map</a><a class="maplink" href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=43.65456%2C-79.40111" target="_blank" rel="noopener">Street view</a></div>
     <div class="leg"><span>250 m</span><span>3 min</span></div>
     <p>From Devni's own saved list. A beef patty here is the 1962-onwards layer in pastry form: the Immigration Act changed, Jamaican shopkeepers arrived in the Market, and the patty became as native to Toronto as the bagel. Open daily from morning until early evening, and one patty each is correct pacing, because there are two stops left.</p>
   </div>
 
-  <div class="stop">
-    <div class="stop-head"><span class="num">Stop four</span><h3>Pancho's Bakery, then the Augusta strip</h3><span class="addr">Augusta Ave &middot; the Latin American layer</span><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Pancho%27s%20Bakery%2C%20Augusta%20Ave%2C%20Toronto%2C%20Ontario" target="_blank" rel="noopener">Map</a></div>
+  <div class="stop" id="stop4">
+    <div class="stop-head"><span class="num">Stop four</span><h3>Pancho's Bakery, then the Augusta strip</h3><span class="addr">Augusta Ave &middot; the Latin American layer</span><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Pancho%27s%20Bakery%2C%20Augusta%20Ave%2C%20Toronto%2C%20Ontario" target="_blank" rel="noopener">Map</a><a class="maplink" href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=43.65473%2C-79.40235" target="_blank" rel="noopener">Street view</a></div>
     <div class="leg"><span>200 m</span><span>3 min</span></div>
     <p>Churros, made fresh all day, three for about five dollars, from the husband-and-wife bakery that has anchored the Market's Mexican presence for years. This is the 1980s layer: Chilean and Central American refugees first, Mexican bakers after, the empanada shops in between.</p>
+    <details class="more"><summary>More</summary>
     <p>Walk the length of <strong>Augusta</strong> while the churro lasts: <strong>Perola's at 247</strong>, founded Portuguese and now the Latin American anchor, is the whole neighbourhood's succession story inside one shop, and <strong>Casa Acoreana at Baldwin and Augusta</strong> is the Portuguese-era nut-and-coffee counter still trading. The honest counterweights are here too: the cannabis shops, and <strong>27 to 29 Kensington Ave</strong>, which the community land trust bought to hold the line. The full argument is on the Arrival City page; today you are just eating in it.</p>
     <div class="trap"><strong>Pancho's has two Kensington addresses in circulation</strong>, 214 Augusta and 235 Augusta, and their own pages disagree. It is one short block; follow the churro smell and trust the awning, not the internet.</div>
+    </details>
   </div>
 
-  <div class="stop">
-    <div class="stop-head"><span class="num">Stop five</span><h3>The nata duel on Dundas West</h3><span class="addr">Caldense at 1209, Nova Era at 1172 &middot; the Portuguese layer</span><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Caldense%20Bakery%2C%201209%20Dundas%20St%20W%2C%20Toronto%2C%20Ontario" target="_blank" rel="noopener">Map</a></div>
+  <div class="stop" id="stop5">
+    <div class="stop-head"><span class="num">Stop five</span><h3>The nata duel on Dundas West</h3><span class="addr">Caldense at 1209, Nova Era at 1172 &middot; the Portuguese layer</span><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Caldense%20Bakery%2C%201209%20Dundas%20St%20W%2C%20Toronto%2C%20Ontario" target="_blank" rel="noopener">Map</a><a class="maplink" href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=43.64927%2C-79.42263" target="_blank" rel="noopener">Street view</a></div>
     <div class="leg"><span>1.3 km west along Dundas</span><span>17 min, which is the digestion leg</span></div>
     <p>Leave the Market westward and walk Dundas West into <strong>Little Portugal</strong>, which exists because the Azorean families who arrived after the 1953 Canada-Portugal labour agreement moved through Kensington and kept going west. The two bakeries that anchor the strip face off a block apart: <strong>Caldense at 1209</strong>, the traditionalist, and <strong>Nova Era at 1172</strong>, which started here on Dundas and grew into a small empire, open five in the morning to eleven at night.</p>
+    <details class="more"><summary>More</summary>
     <p>The move: buy one <strong>pastel de nata</strong> at each, eat them side by side, and declare a winner. The custard should still be warm somewhere in the day's rotation, the top properly scorched. This is the same pastry the Portuguese layer painted onto Kensington's houses, in edible form: a tradition carried whole across an ocean and maintained out of pride.</p>
     <div class="meta"><span>Nova Era daily 5am to 11pm</span><span>Caldense from early, closes evening</span><span>Map for Nova Era: <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Nova%20Era%20Bakery%2C%201172%20Dundas%20St%20W%2C%20Toronto%2C%20Ontario" target="_blank" rel="noopener">Map</a></span></div>
+    </details>
   </div>
 
-  <div class="stop">
-    <div class="stop-head"><span class="num">Stop six</span><h3>Ossington, the newest layer</h3><span class="addr">299 Ossington Ave, or 124 Ossington &middot; pick your ending</span><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Misc%20Coffee%2C%20299%20Ossington%20Ave%2C%20Toronto%2C%20Ontario" target="_blank" rel="noopener">Map</a></div>
+  <div class="stop" id="stop6">
+    <div class="stop-head"><span class="num">Stop six</span><h3>Ossington, the newest layer</h3><span class="addr">299 Ossington Ave, or 124 Ossington &middot; pick your ending</span><a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Misc%20Coffee%2C%20299%20Ossington%20Ave%2C%20Toronto%2C%20Ontario" target="_blank" rel="noopener">Map</a><a class="maplink" href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=43.65090%2C-79.42107" target="_blank" rel="noopener">Street view</a></div>
     <div class="leg"><span>500 m</span><span>7 min</span></div>
     <p>Turn down Ossington and finish inside the most recent migration of all, which is capital. Two endings:</p>
+    <details class="more"><summary>More</summary>
     <p><strong>Misc Coffee, 299 Ossington</strong>, for the espresso version: opened June 2025, owner placed second in Canada's Brewers Cup, beans from a Montreal competition roaster. The flat white here is as much an artefact of its arrival wave as the egg tart was of its own; the difference is what each wave paid in rent. Or <strong>Bellwoods Brewery, 124 Ossington</strong>, for the patio version, which on a warm August afternoon is the best beer garden seat in the west end.</p>
     <p>The closing thought, carried over from the sister walk: Ossington was Portuguese sports bars and karaoke rooms within living memory. Every layer you ate today was once the new arrival that made the old-timers nervous, and the strip you are ending on is simply the latest one, priced accordingly.</p>
+    </details>
   </div>
 </section>
 
@@ -111,5 +128,35 @@
 </section>
 
 </div>
+<script>
+(function () {
+  var stops = [
+    [1, 43.65531, -79.39869, "Mashion Bakery", "stop1"],
+    [2, 43.65445, -79.39951, "Anshei Minsk", "stop2"],
+    [3, 43.65456, -79.40111, "Golden Patty", "stop3"],
+    [4, 43.65473, -79.40235, "Pancho's Bakery", "stop4"],
+    [5, 43.64927, -79.42263, "The nata duel", "stop5"],
+    [6, 43.65090, -79.42107, "Misc Coffee / Bellwoods", "stop6"]
+  ];
+  var map = L.map('walkmap', { scrollWheelZoom: false });
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+  var latlngs = [];
+  stops.forEach(function (st) {
+    var ll = [st[1], st[2]];
+    latlngs.push(ll);
+    L.marker(ll, {
+      icon: L.divIcon({ className: '', html: '<div class="pin-num">' + st[0] + '</div>', iconSize: [26, 26], iconAnchor: [13, 13] })
+    }).addTo(map).bindPopup('<b>' + st[0] + '. ' + st[3] + '</b>').on('click', function () {
+      var el = document.getElementById(st[4]);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+  L.polyline(latlngs, { color: '#0f0f0f', weight: 2, dashArray: '5,7', opacity: 0.7 }).addTo(map);
+  map.fitBounds(L.latLngBounds(latlngs).pad(0.18));
+})();
+</script>
 </body>
 </html>

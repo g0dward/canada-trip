@@ -201,3 +201,37 @@ td { padding: 10px 12px 10px 0; border-bottom: 1px solid var(--rule); vertical-a
   align-self: center; background: var(--surface);
   border: 1px solid var(--rule); padding: 1px;
 }
+
+/* ---------- interactive walk map ---------- */
+#walkmap { height: 420px; border: 1px solid var(--rule); border-radius: 10px; margin-top: 34px; z-index: 1; }
+@media (max-width: 640px) { #walkmap { height: 340px; } }
+.pin-num {
+  background: var(--ink); color: #fff; border-radius: 50%;
+  width: 26px; height: 26px; display: flex; align-items: center; justify-content: center;
+  font-family: var(--mono); font-size: 12px; font-weight: 700;
+  border: 2px solid #fff; box-shadow: 0 1px 4px rgba(0,0,0,.35);
+}
+
+/* ---------- overview + expandable detail ---------- */
+.routelist { border-top: 1px solid var(--ink); margin-top: 30px; }
+.routelist > a {
+  display: grid; grid-template-columns: 30px 1fr auto; gap: 12px; align-items: baseline;
+  padding: 11px 0; border-bottom: 1px solid var(--rule);
+  text-decoration: none; font-size: 14.5px;
+}
+.routelist .n { font-family: var(--mono); font-size: 11px; font-weight: 700; color: var(--ink); }
+.routelist .what { color: var(--muted); font-size: 12.5px; font-family: var(--mono); white-space: nowrap; }
+.routelist > a:hover { background: #f3f3f3; }
+
+details.more { margin-top: 14px; max-width: 720px; }
+details.more summary {
+  cursor: pointer; list-style: none; display: inline-block;
+  font-family: var(--mono); font-size: 11px; font-weight: 600;
+  letter-spacing: .08em; text-transform: uppercase; color: var(--muted);
+  padding: 4px 10px; border: 1px solid var(--rule-strong); border-radius: 5px; background: var(--surface);
+}
+details.more summary::-webkit-details-marker { display: none; }
+details.more summary::after { content: " +"; }
+details.more[open] summary::after { content: " \2212"; }
+details.more summary:hover { border-color: var(--ink); color: var(--ink); }
+details.more > *:not(summary) { margin-top: 12px; }
